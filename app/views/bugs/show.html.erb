@@ -1,0 +1,27 @@
+
+<table border="1">
+	<thead>
+		
+		<td>Title</td>
+		<td>Description</td>
+		<td>Type</td>
+		<td> Link </td>
+	</tr>
+		</thead>
+
+		<tbody>
+			<% @bugs.each do |u| %>
+			<tr>
+				<td><%= u.title %></td>
+				<td><%= u.description %></td>
+				<td><%= u.bug_type %></td>
+			 <% url = "/bugs/details/#{u.id}" %>
+			 <td><a href=<%= url %>>Details</a> </td>
+			</tr>
+			<% end %>
+
+		</tbody>
+</table>
+
+<% url="/bugs/new/#{@id}" %>
+<a href=<%= url %>>Create new Bug</a>

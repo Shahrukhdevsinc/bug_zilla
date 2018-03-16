@@ -4,7 +4,7 @@ class CreateBugs < ActiveRecord::Migration[5.1]
       t.references :project, foreign_key: true
       t.string :title
       t.string :description
-      t.string :type
+      t.string :bug_type
       t.date :deadline
       t.string :screenshot
       t.references:createdby 

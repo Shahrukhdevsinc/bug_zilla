@@ -19,7 +19,7 @@ ActiveRecord::Schema.define(version: 20180312055727) do
     t.bigint "project_id"
     t.string "title"
     t.string "description"
-    t.string "type"
+    t.string "bug_type"
     t.date "deadline"
     t.string "screenshot"
     t.bigint "createdby_id"

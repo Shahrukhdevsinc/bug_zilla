@@ -1,0 +1,12 @@
+<%= form_tag("/projects/create", method: "post") do %>
+  <%= label_tag(:name, "Name:") %>
+  <%= text_field_tag(:name) %>
+  <%= label_tag(:description, "Description:") %>
+  <%= text_field_tag(:description) %>
+
+
+
+<%= select_tag(:user_ids,options_from_collection_for_select(User.where(:role => "Developer"), :id, :name).html_safe, multiple: true ) %>
+
+  <%= submit_tag("CREATE PROJECT") %>
+<% end %>

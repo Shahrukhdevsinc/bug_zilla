@@ -23,9 +23,24 @@ class UsersController < ApplicationController
  
 
   def login
+    @new = User.new
   end
 
   def logout
+    reset_session
+    redirect_to users_login_path
+  end
+
+  def process_login
+    @user = User.where(:email => user_params[:email] , :password => user_params[:password])
+    if (@user.present?)
+      session[:user]= @user;
+    
+    redirect_to dashboard_home_path
+  else 
+    @message = "Invalid credentials"
+    redirect_to users_login_path
+  end
   end
 
   def user_params

@@ -1,2 +1,19 @@
-<h1>Users#login</h1>
-<p>Find me in app/views/users/login.html.erb</p>
+
+<% if flash[:notice].present? %>
+ <script> alert("<%= flash[:notice]%>"); </script>
+<% end %>
+
+<%= form_for User.new ,:url => users_process_login_path do |f| %>
+
+
+  <%= f.label :email %>
+  <%= f.email_field :email %>
+
+  <%= f.label :password %>
+  <%= f.password_field :password %>
+
+  <%= f.submit "Submit" %>
+<% end %>
+
+
+<%= button_to 'Signup', users_new_path, method: :get %>

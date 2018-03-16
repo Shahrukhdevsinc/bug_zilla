@@ -1,0 +1,22 @@
+
+<table border="1">
+	<thead>
+		<tr> Manager: <%= @manager %></td></tr>
+		<tr>
+		<td>Name</td>
+		<td>Email</td>
+		<td>Role</td>
+	</tr>
+		</thead>
+
+		<tbody>
+			<% @users.each do |u| %>
+			<tr>
+				<td><%= u.name %></td>
+				<td><%= u.email %></td>
+				<td><%= u.role %></td>
+			</tr>
+			<% end %>
+
+		</tbody>
+</table>
