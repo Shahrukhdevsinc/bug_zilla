@@ -1,5 +1,5 @@
 class Bug < ApplicationRecord
-	 validates :title, presence: true . uniqueness: true
+	 validates :title, presence: true      , uniqueness: true
   belongs_to :project
   belongs_to :assignedto,
                 :class_name => "User"
