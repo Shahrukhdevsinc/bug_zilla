@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  project: one
+  title: MyString
+  description: MyString
+  type: 
+
+two:
+  project: two
+  title: MyString
+  description: MyString
+  type: 
