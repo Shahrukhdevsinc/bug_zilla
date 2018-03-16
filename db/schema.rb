@@ -10,17 +10,20 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180313065328) do
+ActiveRecord::Schema.define(version: 20180312055727) do
+
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
 
   create_table "bugs", force: :cascade do |t|
-    t.integer "project_id"
+    t.bigint "project_id"
     t.string "title"
     t.string "description"
     t.string "type"
     t.date "deadline"
     t.string "screenshot"
-    t.integer "createdby_id"
-    t.integer "assignedto_id"
+    t.bigint "createdby_id"
+    t.bigint "assignedto_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["assignedto_id"], name: "index_bugs_on_assignedto_id"
@@ -29,8 +32,8 @@ ActiveRecord::Schema.define(version: 20180313065328) do
   end
 
   create_table "project_users", force: :cascade do |t|
-    t.integer "project_id"
-    t.integer "user_id"
+    t.bigint "project_id"
+    t.bigint "user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["project_id"], name: "index_project_users_on_project_id"
@@ -38,7 +41,7 @@ ActiveRecord::Schema.define(version: 20180313065328) do
   end
 
   create_table "projects", force: :cascade do |t|
-    t.integer "manager_id"
+    t.bigint "manager_id"
     t.string "name"
     t.string "description"
     t.datetime "created_at", null: false
@@ -55,4 +58,10 @@ ActiveRecord::Schema.define(version: 20180313065328) do
     t.datetime "updated_at", null: false
   end
 
+  add_foreign_key "bugs", "projects"
+  add_foreign_key "bugs", "users", column: "assignedto_id"
+  add_foreign_key "bugs", "users", column: "createdby_id"
+  add_foreign_key "project_users", "projects"
+  add_foreign_key "project_users", "users"
+  add_foreign_key "projects", "users", column: "manager_id"
 end
