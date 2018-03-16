@@ -10,4 +10,3 @@ class Bug < ApplicationRecord
       :inclusion  => { :in => [ 'Feature', 'Bug'],
     :message    => "%{value} is not a valid type" }
 end
-end
