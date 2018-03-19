@@ -3,12 +3,23 @@
  <script> alert("<%= flash[:notice]%>"); </script>
 <% end %>
 
-<table border="1">
-	<thead><td> Name </td>
+
+<div class='container-fluid'>
+	<div class='row'>
+		<div class='col-sm-3'></div>
+		<div class='col-sm-6'>
+			 <div class="panel panel-success">
+			 	<div class='panel-heading'> Projects </div>
+  <div class="panel-body">
+    <table class='table table-bordered"'>
+	<thead>
+<tr>
+		<td> Name </td>
           <td> Description </td>
           <td> links </td>
          <% if @role == 'Manager' %>
           <td> delete </td>
+      </tr>
           <% end %>
 	</thead>
 	
@@ -40,3 +51,10 @@
 
 <% end %>
 
+</div>
+		</div>
+		<div class='col-sm-3'></div>
+
+
+	</div>
+</div>

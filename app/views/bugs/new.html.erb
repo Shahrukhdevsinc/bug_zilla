@@ -1,5 +1,14 @@
-<h1>Bugs Create</h1>
 
+
+
+<div class='container-fluid'>
+    <div class='row'>
+        <div class='col-sm-3'></div>
+        <div class='col-sm-6'>
+             <div class="panel panel-success">
+                <div class='panel-heading'>Create bug </div>
+  <div class="panel-body">
+    
 <%=  form_tag('/bugs/create_bug', method: "post",multipart: true) do -%> 
 <%= label_tag :Title %>: <%= text_field_tag :title %><br/><br/>
 <%= label_tag :Description %>: <%= text_area_tag :description %><br/><br/>
@@ -20,6 +29,15 @@ User.all, :id, :name) ) %>
 <br/><br/>
  <input name="project_id" type="hidden" value= <%= params[:id] %> />
 <%= submit_tag :Add %> <% end -%>
+</div>
+</div>
+        </div>
+        <div class='col-sm-3'></div>
+
+
+    </div>
+</div>
+
 
 <script type="text/javascript">
     $(document).ready(function(){
@@ -43,3 +61,5 @@ User.all, :id, :name) ) %>
   });
 });
 </script>
+
+

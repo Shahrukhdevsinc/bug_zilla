@@ -11963,3 +11963,2442 @@ Processing by UsersController#login as HTML
 Completed 200 OK in 35ms (Views: 33.3ms | ActiveRecord: 0.0ms)
 
 
+Started GET "/" for 127.0.0.1 at 2018-03-19 11:13:16 +0500
+  [1m[35m (39.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by UsersController#login as HTML
+  Rendering users/login.html.erb within layouts/application
+  Rendered users/login.html.erb within layouts/application (112.0ms)
+Completed 200 OK in 897ms (Views: 790.0ms | ActiveRecord: 54.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-03-19 11:14:59 +0500
+Processing by UsersController#login as HTML
+  Rendering users/login.html.erb within layouts/application
+  Rendered users/login.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 35ms (Views: 33.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/process_login" for 127.0.0.1 at 2018-03-19 11:15:08 +0500
+Processing by UsersController#process_login as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Oa9qwh3lfV1LZ7oSObAqhIOiNj2Vi+38L6LG3tXxHx4B9GOdsQWTA9S9p/XjAnj25vf9oFEWKISuL3SsvKcKsQ==", "user"=>{"email"=>"shahrukh@k.com", "password"=>"[FILTERED]"}, "commit"=>"Submit"}
+  [1m[36mUser Load (39.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 AND "users"."password" = $2[0m  [["email", "shahrukh@k.com"], ["password", "123456"]]
+Redirected to http://localhost:3000/dashboard/home
+Completed 302 Found in 61ms (ActiveRecord: 39.2ms)
+
+
+Started GET "/dashboard/home" for 127.0.0.1 at 2018-03-19 11:15:08 +0500
+Processing by DashboardController#home as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering dashboard/home.html.erb within layouts/application
+  [1m[36mProject Load (30.7ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."manager_id" = $1[0m  [["manager_id", 1]]
+  Rendered dashboard/home.html.erb within layouts/application (49.0ms)
+Completed 200 OK in 139ms (Views: 34.4ms | ActiveRecord: 35.4ms)
+
+
+Started GET "/projects/new" for 127.0.0.1 at 2018-03-19 11:15:10 +0500
+Processing by ProjectsController#new as HTML
+  Rendering projects/new.html.erb within layouts/application
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."role" = $1[0m  [["role", "Developer"]]
+  Rendered projects/new.html.erb within layouts/application (3.9ms)
+Completed 200 OK in 50ms (Views: 33.8ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/bugs/show/5" for 127.0.0.1 at 2018-03-19 11:15:15 +0500
+Processing by BugsController#show as HTML
+  Parameters: {"id"=>"5"}
+  Rendering bugs/show.html.erb within layouts/application
+  [1m[36mBug Load (44.0ms)[0m  [1m[34mSELECT "bugs".* FROM "bugs" WHERE "bugs"."project_id" = $1[0m  [["project_id", 5]]
+  Rendered bugs/show.html.erb within layouts/application (47.1ms)
+Completed 200 OK in 141ms (Views: 35.2ms | ActiveRecord: 46.3ms)
+
+
+Started GET "/bugs/new/5" for 127.0.0.1 at 2018-03-19 11:15:16 +0500
+Processing by BugsController#new as HTML
+  Parameters: {"id"=>"5"}
+  Rendering bugs/new.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered bugs/new.html.erb within layouts/application (20.4ms)
+Completed 200 OK in 69ms (Views: 44.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/bugs/new/5" for 127.0.0.1 at 2018-03-19 11:15:49 +0500
+Processing by BugsController#new as HTML
+  Parameters: {"id"=>"5"}
+  Rendering bugs/new.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered bugs/new.html.erb within layouts/application (4.4ms)
+Completed 200 OK in 24ms (Views: 22.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/bugs/new/5" for 127.0.0.1 at 2018-03-19 11:15:50 +0500
+Processing by BugsController#new as HTML
+  Parameters: {"id"=>"5"}
+  Rendering bugs/new.html.erb within layouts/application
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered bugs/new.html.erb within layouts/application (6.5ms)
+Completed 200 OK in 44ms (Views: 40.7ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/bugs/new/5" for 127.0.0.1 at 2018-03-19 11:15:55 +0500
+Processing by BugsController#new as HTML
+  Parameters: {"id"=>"5"}
+  Rendering bugs/new.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered bugs/new.html.erb within layouts/application (4.5ms)
+Completed 200 OK in 30ms (Views: 27.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/bugs/new/5" for 127.0.0.1 at 2018-03-19 11:15:56 +0500
+Processing by BugsController#new as HTML
+  Parameters: {"id"=>"5"}
+  Rendering bugs/new.html.erb within layouts/application
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered bugs/new.html.erb within layouts/application (6.0ms)
+Completed 200 OK in 42ms (Views: 39.2ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/bugs/new/5" for 127.0.0.1 at 2018-03-19 11:26:50 +0500
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by BugsController#new as HTML
+  Parameters: {"id"=>"5"}
+  Rendering bugs/new.html.erb within layouts/application
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered bugs/new.html.erb within layouts/application (31.3ms)
+Started GET "/bugs/new/5" for 127.0.0.1 at 2018-03-19 11:26:51 +0500
+Processing by BugsController#new as HTML
+  Parameters: {"id"=>"5"}
+  Rendering bugs/new.html.erb within layouts/application
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered bugs/new.html.erb within layouts/application (16.7ms)
+Completed 200 OK in 2986ms (Views: 2973.2ms | ActiveRecord: 4.2ms)
+
+
+Completed 200 OK in 1578ms (Views: 1569.4ms | ActiveRecord: 6.9ms)
+
+
+Started GET "/dashboard/home" for 127.0.0.1 at 2018-03-19 11:26:57 +0500
+Processing by DashboardController#home as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering dashboard/home.html.erb within layouts/application
+  [1m[36mProject Load (0.4ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."manager_id" = $1[0m  [["manager_id", 1]]
+  Rendered dashboard/home.html.erb within layouts/application (19.2ms)
+Completed 200 OK in 72ms (Views: 38.3ms | ActiveRecord: 4.4ms)
+
+
+Started GET "/projects/new" for 127.0.0.1 at 2018-03-19 11:26:59 +0500
+Processing by ProjectsController#new as HTML
+  Rendering projects/new.html.erb within layouts/application
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."role" = $1[0m  [["role", "Developer"]]
+  Rendered projects/new.html.erb within layouts/application (5.5ms)
+Completed 200 OK in 61ms (Views: 57.8ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/users/logout" for 127.0.0.1 at 2018-03-19 11:27:11 +0500
+Processing by UsersController#logout as HTML
+Redirected to http://localhost:3000/users/login
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users/login" for 127.0.0.1 at 2018-03-19 11:27:11 +0500
+Processing by UsersController#login as HTML
+  Rendering users/login.html.erb within layouts/application
+  Rendered users/login.html.erb within layouts/application (17.6ms)
+Completed 200 OK in 47ms (Views: 45.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/login" for 127.0.0.1 at 2018-03-19 11:28:04 +0500
+Processing by UsersController#login as HTML
+  Rendering users/login.html.erb within layouts/application
+  Rendered users/login.html.erb within layouts/application (6.9ms)
+Completed 200 OK in 50ms (Views: 47.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/login" for 127.0.0.1 at 2018-03-19 11:32:32 +0500
+Processing by UsersController#login as HTML
+  Rendering users/login.html.erb within layouts/application
+  Rendered users/login.html.erb within layouts/application (3.4ms)
+Completed 200 OK in 57ms (Views: 55.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/login" for 127.0.0.1 at 2018-03-19 11:32:33 +0500
+Processing by UsersController#login as HTML
+  Rendering users/login.html.erb within layouts/application
+  Rendered users/login.html.erb within layouts/application (3.3ms)
+Completed 200 OK in 31ms (Views: 29.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/login" for 127.0.0.1 at 2018-03-19 11:32:34 +0500
+Processing by UsersController#login as HTML
+  Rendering users/login.html.erb within layouts/application
+  Rendered users/login.html.erb within layouts/application (5.4ms)
+Completed 200 OK in 34ms (Views: 31.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/login" for 127.0.0.1 at 2018-03-19 11:32:34 +0500
+Processing by UsersController#login as HTML
+  Rendering users/login.html.erb within layouts/application
+  Rendered users/login.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 22ms (Views: 20.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/login" for 127.0.0.1 at 2018-03-19 11:32:35 +0500
+Processing by UsersController#login as HTML
+  Rendering users/login.html.erb within layouts/application
+  Rendered users/login.html.erb within layouts/application (3.2ms)
+Completed 200 OK in 22ms (Views: 20.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/login" for 127.0.0.1 at 2018-03-19 11:32:35 +0500
+Processing by UsersController#login as HTML
+  Rendering users/login.html.erb within layouts/application
+  Rendered users/login.html.erb within layouts/application (3.3ms)
+Completed 200 OK in 23ms (Views: 21.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/login" for 127.0.0.1 at 2018-03-19 11:32:35 +0500
+Processing by UsersController#login as HTML
+  Rendering users/login.html.erb within layouts/application
+  Rendered users/login.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 21ms (Views: 20.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/login" for 127.0.0.1 at 2018-03-19 11:32:43 +0500
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by UsersController#login as HTML
+  Rendering users/login.html.erb within layouts/application
+  Rendered users/login.html.erb within layouts/application (14.6ms)
+Completed 200 OK in 281ms (Views: 249.1ms | ActiveRecord: 3.9ms)
+
+
+Started GET "/users/login" for 127.0.0.1 at 2018-03-19 11:32:44 +0500
+Processing by UsersController#login as HTML
+  Rendering users/login.html.erb within layouts/application
+  Rendered users/login.html.erb within layouts/application (3.5ms)
+Completed 200 OK in 37ms (Views: 34.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/login" for 127.0.0.1 at 2018-03-19 11:32:44 +0500
+Processing by UsersController#login as HTML
+  Rendering users/login.html.erb within layouts/application
+  Rendered users/login.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 21ms (Views: 19.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/login" for 127.0.0.1 at 2018-03-19 11:32:45 +0500
+Processing by UsersController#login as HTML
+  Rendering users/login.html.erb within layouts/application
+  Rendered users/login.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 43ms (Views: 41.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/login" for 127.0.0.1 at 2018-03-19 11:32:46 +0500
+Processing by UsersController#login as HTML
+  Rendering users/login.html.erb within layouts/application
+  Rendered users/login.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 22ms (Views: 20.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/login" for 127.0.0.1 at 2018-03-19 11:32:58 +0500
+Processing by UsersController#login as HTML
+  Rendering users/login.html.erb within layouts/application
+  Rendered users/login.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 27ms (Views: 25.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/login" for 127.0.0.1 at 2018-03-19 11:33:01 +0500
+Processing by UsersController#login as HTML
+  Rendering users/login.html.erb within layouts/application
+  Rendered users/login.html.erb within layouts/application (3.8ms)
+Completed 200 OK in 34ms (Views: 31.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/login" for 127.0.0.1 at 2018-03-19 11:33:02 +0500
+Processing by UsersController#login as HTML
+  Rendering users/login.html.erb within layouts/application
+  Rendered users/login.html.erb within layouts/application (3.7ms)
+Completed 200 OK in 29ms (Views: 27.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/login" for 127.0.0.1 at 2018-03-19 11:33:02 +0500
+Processing by UsersController#login as HTML
+  Rendering users/login.html.erb within layouts/application
+  Rendered users/login.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 28ms (Views: 26.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/login" for 127.0.0.1 at 2018-03-19 11:33:04 +0500
+Processing by UsersController#login as HTML
+  Rendering users/login.html.erb within layouts/application
+  Rendered users/login.html.erb within layouts/application (3.5ms)
+Completed 200 OK in 37ms (Views: 34.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/login" for 127.0.0.1 at 2018-03-19 11:33:04 +0500
+Processing by UsersController#login as HTML
+  Rendering users/login.html.erb within layouts/application
+  Rendered users/login.html.erb within layouts/application (3.9ms)
+Completed 200 OK in 36ms (Views: 34.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/login" for 127.0.0.1 at 2018-03-19 11:33:05 +0500
+Processing by UsersController#login as HTML
+  Rendering users/login.html.erb within layouts/application
+  Rendered users/login.html.erb within layouts/application (4.6ms)
+Completed 200 OK in 38ms (Views: 35.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/login" for 127.0.0.1 at 2018-03-19 11:33:05 +0500
+Processing by UsersController#login as HTML
+  Rendering users/login.html.erb within layouts/application
+  Rendered users/login.html.erb within layouts/application (3.3ms)
+Completed 200 OK in 32ms (Views: 30.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/login" for 127.0.0.1 at 2018-03-19 11:38:31 +0500
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by UsersController#login as HTML
+  Rendering users/login.html.erb within layouts/application
+  Rendered users/login.html.erb within layouts/application (13.3ms)
+Completed 200 OK in 3828ms (Views: 3797.2ms | ActiveRecord: 3.7ms)
+
+
+Started GET "/users/login" for 127.0.0.1 at 2018-03-19 11:38:41 +0500
+Processing by UsersController#login as HTML
+  Rendering users/login.html.erb within layouts/application
+  Rendered users/login.html.erb within layouts/application (5.3ms)
+Completed 200 OK in 61ms (Views: 58.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/login" for 127.0.0.1 at 2018-03-19 11:38:42 +0500
+Processing by UsersController#login as HTML
+  Rendering users/login.html.erb within layouts/application
+  Rendered users/login.html.erb within layouts/application (6.3ms)
+Completed 200 OK in 58ms (Views: 55.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/login" for 127.0.0.1 at 2018-03-19 12:14:24 +0500
+Processing by UsersController#login as HTML
+  Rendering users/login.html.erb within layouts/application
+  Rendered users/login.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 34ms (Views: 33.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/login" for 127.0.0.1 at 2018-03-19 12:14:24 +0500
+Processing by UsersController#login as HTML
+  Rendering users/login.html.erb within layouts/application
+  Rendered users/login.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 38ms (Views: 35.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/login" for 127.0.0.1 at 2018-03-19 12:16:17 +0500
+Processing by UsersController#login as HTML
+  Rendering users/login.html.erb within layouts/application
+  Rendered users/login.html.erb within layouts/application (5.3ms)
+Completed 200 OK in 57ms (Views: 54.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/login" for 127.0.0.1 at 2018-03-19 12:23:03 +0500
+Processing by UsersController#login as HTML
+  Rendering users/login.html.erb within layouts/application
+  Rendered users/login.html.erb within layouts/application (2.1ms)
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/home/devsinc/Desktop/ror/bugs/app/views/users/login.html.erb:14: syntax error, unexpected tSTRING_BEG, expecting keyword_end
+ :class => 'form-horizotal' }" );@output_buffer.safe_append=
+                              ^
+/home/devsinc/Desktop/ror/bugs/app/views/users/login.html.erb:23: syntax error, unexpected tCONSTANT, expecting ')'
+ffer.append=( f.submit "Submit" );@output_buffer.safe_append
+                              ^
+/home/devsinc/Desktop/ror/bugs/app/views/users/login.html.erb:23: unterminated string meets end of file
+/home/devsinc/Desktop/ror/bugs/app/views/users/login.html.erb:23: syntax error, unexpected end-of-input, expecting ')'):
+  
+app/views/users/login.html.erb:14: syntax error, unexpected tSTRING_BEG, expecting keyword_end
+app/views/users/login.html.erb:23: syntax error, unexpected tCONSTANT, expecting ')'
+app/views/users/login.html.erb:23: unterminated string meets end of file
+app/views/users/login.html.erb:23: syntax error, unexpected end-of-input, expecting ')'
+Started GET "/users/login" for 127.0.0.1 at 2018-03-19 12:23:25 +0500
+Processing by UsersController#login as HTML
+  Rendering users/login.html.erb within layouts/application
+  Rendered users/login.html.erb within layouts/application (1.0ms)
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/home/devsinc/Desktop/ror/bugs/app/views/users/login.html.erb:14: syntax error, unexpected ')', expecting keyword_end
+:class => 'form-horizotal' } );@output_buffer.safe_append='
+                              ^
+/home/devsinc/Desktop/ror/bugs/app/views/users/login.html.erb:24: syntax error, unexpected keyword_end, expecting ')'
+'.freeze; end 
+             ^
+/home/devsinc/Desktop/ror/bugs/app/views/users/login.html.erb:37: syntax error, unexpected keyword_ensure, expecting ')'
+          ensure
+                ^
+/home/devsinc/Desktop/ror/bugs/app/views/users/login.html.erb:39: syntax error, unexpected keyword_end, expecting ')'
+          end
+             ^):
+  
+app/views/users/login.html.erb:14: syntax error, unexpected ')', expecting keyword_end
+app/views/users/login.html.erb:24: syntax error, unexpected keyword_end, expecting ')'
+app/views/users/login.html.erb:37: syntax error, unexpected keyword_ensure, expecting ')'
+app/views/users/login.html.erb:39: syntax error, unexpected keyword_end, expecting ')'
+Started GET "/users/login" for 127.0.0.1 at 2018-03-19 12:23:26 +0500
+Processing by UsersController#login as HTML
+  Rendering users/login.html.erb within layouts/application
+  Rendered users/login.html.erb within layouts/application (1.5ms)
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/home/devsinc/Desktop/ror/bugs/app/views/users/login.html.erb:14: syntax error, unexpected ')', expecting keyword_end
+:class => 'form-horizotal' } );@output_buffer.safe_append='
+                              ^
+/home/devsinc/Desktop/ror/bugs/app/views/users/login.html.erb:24: syntax error, unexpected keyword_end, expecting ')'
+'.freeze; end 
+             ^
+/home/devsinc/Desktop/ror/bugs/app/views/users/login.html.erb:37: syntax error, unexpected keyword_ensure, expecting ')'
+          ensure
+                ^
+/home/devsinc/Desktop/ror/bugs/app/views/users/login.html.erb:39: syntax error, unexpected keyword_end, expecting ')'
+          end
+             ^):
+  
+app/views/users/login.html.erb:14: syntax error, unexpected ')', expecting keyword_end
+app/views/users/login.html.erb:24: syntax error, unexpected keyword_end, expecting ')'
+app/views/users/login.html.erb:37: syntax error, unexpected keyword_ensure, expecting ')'
+app/views/users/login.html.erb:39: syntax error, unexpected keyword_end, expecting ')'
+Started GET "/users/login" for 127.0.0.1 at 2018-03-19 12:23:41 +0500
+Processing by UsersController#login as HTML
+  Rendering users/login.html.erb within layouts/application
+  Rendered users/login.html.erb within layouts/application (1.2ms)
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/home/devsinc/Desktop/ror/bugs/app/views/users/login.html.erb:14: syntax error, unexpected ')', expecting keyword_end
+class => 'form-horizontal' } );@output_buffer.safe_append='
+                              ^
+/home/devsinc/Desktop/ror/bugs/app/views/users/login.html.erb:24: syntax error, unexpected keyword_end, expecting ')'
+'.freeze; end 
+             ^
+/home/devsinc/Desktop/ror/bugs/app/views/users/login.html.erb:37: syntax error, unexpected keyword_ensure, expecting ')'
+          ensure
+                ^
+/home/devsinc/Desktop/ror/bugs/app/views/users/login.html.erb:39: syntax error, unexpected keyword_end, expecting ')'
+          end
+             ^):
+  
+app/views/users/login.html.erb:14: syntax error, unexpected ')', expecting keyword_end
+app/views/users/login.html.erb:24: syntax error, unexpected keyword_end, expecting ')'
+app/views/users/login.html.erb:37: syntax error, unexpected keyword_ensure, expecting ')'
+app/views/users/login.html.erb:39: syntax error, unexpected keyword_end, expecting ')'
+Started GET "/users/login" for 127.0.0.1 at 2018-03-19 12:27:19 +0500
+Processing by UsersController#login as HTML
+  Rendering users/login.html.erb within layouts/application
+  Rendered users/login.html.erb within layouts/application (3.1ms)
+Completed 200 OK in 32ms (Views: 30.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/login" for 127.0.0.1 at 2018-03-19 13:09:01 +0500
+Processing by UsersController#login as HTML
+  Rendering users/login.html.erb within layouts/application
+  Rendered users/login.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 30ms (Views: 28.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/process_login" for 127.0.0.1 at 2018-03-19 13:09:08 +0500
+Processing by UsersController#process_login as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"FiOES59n0gfBy5lTzLuH05TYmK/1exYkDKfay39IpngnBMAltWiG+qGsj/uinmkjHhYdiUw73CKlIdiRF07D4w==", "user"=>{"email"=>"shahrukh@k.com", "password"=>"[FILTERED]"}, "commit"=>"Submit"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 AND "users"."password" = $2[0m  [["email", "shahrukh@k.com"], ["password", "123456"]]
+Redirected to http://localhost:3000/dashboard/home
+Completed 302 Found in 13ms (ActiveRecord: 0.7ms)
+
+
+Started GET "/dashboard/home" for 127.0.0.1 at 2018-03-19 13:09:08 +0500
+Processing by DashboardController#home as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering dashboard/home.html.erb within layouts/application
+  [1m[36mProject Load (0.4ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."manager_id" = $1[0m  [["manager_id", 1]]
+  Rendered dashboard/home.html.erb within layouts/application (16.9ms)
+Completed 200 OK in 54ms (Views: 32.3ms | ActiveRecord: 4.2ms)
+
+
+Started GET "/dashboard/home" for 127.0.0.1 at 2018-03-19 13:09:10 +0500
+Processing by DashboardController#home as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering dashboard/home.html.erb within layouts/application
+  [1m[36mProject Load (0.5ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."manager_id" = $1[0m  [["manager_id", 1]]
+  Rendered dashboard/home.html.erb within layouts/application (4.5ms)
+Completed 200 OK in 39ms (Views: 35.0ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/dashboard/home" for 127.0.0.1 at 2018-03-19 13:09:11 +0500
+Processing by DashboardController#home as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering dashboard/home.html.erb within layouts/application
+  [1m[36mProject Load (0.3ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."manager_id" = $1[0m  [["manager_id", 1]]
+  Rendered dashboard/home.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 38ms (Views: 35.3ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/users/logout" for 127.0.0.1 at 2018-03-19 13:09:12 +0500
+Processing by UsersController#logout as HTML
+Redirected to http://localhost:3000/users/login
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users/login" for 127.0.0.1 at 2018-03-19 13:09:12 +0500
+Processing by UsersController#login as HTML
+  Rendering users/login.html.erb within layouts/application
+  Rendered users/login.html.erb within layouts/application (3.1ms)
+Completed 200 OK in 34ms (Views: 32.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/login" for 127.0.0.1 at 2018-03-19 13:09:40 +0500
+Processing by UsersController#login as HTML
+  Rendering users/login.html.erb within layouts/application
+  Rendered users/login.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 29ms (Views: 27.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/process_login" for 127.0.0.1 at 2018-03-19 13:09:47 +0500
+Processing by UsersController#process_login as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ChVLntQA8UqgPqC8RFDBpEKWC+eZ7f0DBEodnljyjo3HTfmXw45qAMB7OqNfg1aXyDSYzQIzUi59rGY+KZAAPw==", "user"=>{"email"=>"shahrukh@k.com", "password"=>"[FILTERED]"}, "commit"=>"Submit"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 AND "users"."password" = $2[0m  [["email", "shahrukh@k.com"], ["password", "123456"]]
+Redirected to http://localhost:3000/dashboard/home
+Completed 302 Found in 3ms (ActiveRecord: 0.5ms)
+
+
+Started GET "/dashboard/home" for 127.0.0.1 at 2018-03-19 13:09:47 +0500
+Processing by DashboardController#home as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering dashboard/home.html.erb within layouts/application
+  [1m[36mProject Load (0.3ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."manager_id" = $1[0m  [["manager_id", 1]]
+  Rendered dashboard/home.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 37ms (Views: 33.6ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/dashboard/home" for 127.0.0.1 at 2018-03-19 13:10:25 +0500
+Processing by DashboardController#home as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering dashboard/home.html.erb within layouts/application
+  [1m[36mProject Load (0.5ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."manager_id" = $1[0m  [["manager_id", 1]]
+  Rendered dashboard/home.html.erb within layouts/application (5.1ms)
+Completed 200 OK in 36ms (Views: 31.9ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/dashboard/home" for 127.0.0.1 at 2018-03-19 13:10:26 +0500
+Processing by DashboardController#home as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering dashboard/home.html.erb within layouts/application
+  [1m[36mProject Load (0.4ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."manager_id" = $1[0m  [["manager_id", 1]]
+  Rendered dashboard/home.html.erb within layouts/application (3.1ms)
+Completed 200 OK in 25ms (Views: 22.1ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/dashboard/home" for 127.0.0.1 at 2018-03-19 13:10:27 +0500
+Processing by DashboardController#home as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering dashboard/home.html.erb within layouts/application
+  [1m[36mProject Load (0.5ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."manager_id" = $1[0m  [["manager_id", 1]]
+  Rendered dashboard/home.html.erb within layouts/application (5.5ms)
+Completed 200 OK in 42ms (Views: 37.5ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/dashboard/home" for 127.0.0.1 at 2018-03-19 13:10:28 +0500
+Processing by DashboardController#home as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering dashboard/home.html.erb within layouts/application
+  [1m[36mProject Load (0.3ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."manager_id" = $1[0m  [["manager_id", 1]]
+  Rendered dashboard/home.html.erb within layouts/application (3.3ms)
+Completed 200 OK in 30ms (Views: 26.2ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/users/logout" for 127.0.0.1 at 2018-03-19 13:10:29 +0500
+Processing by UsersController#logout as HTML
+Redirected to http://localhost:3000/users/login
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users/login" for 127.0.0.1 at 2018-03-19 13:10:29 +0500
+Processing by UsersController#login as HTML
+  Rendering users/login.html.erb within layouts/application
+  Rendered users/login.html.erb within layouts/application (4.5ms)
+Completed 200 OK in 41ms (Views: 38.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/process_login" for 127.0.0.1 at 2018-03-19 13:10:37 +0500
+Processing by UsersController#process_login as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"s41x077u5mU4guKy5GYfq4oDfHcaAPLYrSgBYMAXHEzY3MYcyMued3HtkqZ0WJ8+BhaLANYt5+Ofyx8nZ9PDAg==", "user"=>{"email"=>"shahrukh@k.com", "password"=>"[FILTERED]"}, "commit"=>"Submit"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 AND "users"."password" = $2[0m  [["email", "shahrukh@k.com"], ["password", "123456"]]
+Redirected to http://localhost:3000/dashboard/home
+Completed 302 Found in 4ms (ActiveRecord: 0.6ms)
+
+
+Started GET "/dashboard/home" for 127.0.0.1 at 2018-03-19 13:10:37 +0500
+Processing by DashboardController#home as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering dashboard/home.html.erb within layouts/application
+  [1m[36mProject Load (0.3ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."manager_id" = $1[0m  [["manager_id", 1]]
+  Rendered dashboard/home.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 41ms (Views: 37.5ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/dashboard/home" for 127.0.0.1 at 2018-03-19 13:11:32 +0500
+Processing by DashboardController#home as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering dashboard/home.html.erb within layouts/application
+  [1m[36mProject Load (0.3ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."manager_id" = $1[0m  [["manager_id", 1]]
+  Rendered dashboard/home.html.erb within layouts/application (3.6ms)
+Completed 200 OK in 42ms (Views: 36.9ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/projects/new" for 127.0.0.1 at 2018-03-19 13:11:34 +0500
+Processing by ProjectsController#new as HTML
+  Rendering projects/new.html.erb within layouts/application
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."role" = $1[0m  [["role", "Developer"]]
+  Rendered projects/new.html.erb within layouts/application (4.4ms)
+Completed 200 OK in 35ms (Views: 33.0ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/dashboard/home" for 127.0.0.1 at 2018-03-19 13:11:35 +0500
+Processing by DashboardController#home as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering dashboard/home.html.erb within layouts/application
+  [1m[36mProject Load (0.4ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."manager_id" = $1[0m  [["manager_id", 1]]
+  Rendered dashboard/home.html.erb within layouts/application (4.3ms)
+Completed 200 OK in 42ms (Views: 38.1ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/dashboard/home" for 127.0.0.1 at 2018-03-19 13:16:29 +0500
+Processing by DashboardController#home as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering dashboard/home.html.erb within layouts/application
+  [1m[36mProject Load (0.3ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."manager_id" = $1[0m  [["manager_id", 1]]
+  Rendered dashboard/home.html.erb within layouts/application (3.5ms)
+Completed 200 OK in 33ms (Views: 29.4ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/dashboard/home" for 127.0.0.1 at 2018-03-19 13:18:43 +0500
+Processing by DashboardController#home as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering dashboard/home.html.erb within layouts/application
+  [1m[36mProject Load (0.3ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."manager_id" = $1[0m  [["manager_id", 1]]
+  Rendered dashboard/home.html.erb within layouts/application (3.5ms)
+Completed 200 OK in 33ms (Views: 29.8ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/dashboard/home" for 127.0.0.1 at 2018-03-19 13:18:44 +0500
+Processing by DashboardController#home as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering dashboard/home.html.erb within layouts/application
+  [1m[36mProject Load (0.5ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."manager_id" = $1[0m  [["manager_id", 1]]
+  Rendered dashboard/home.html.erb within layouts/application (5.3ms)
+Completed 200 OK in 56ms (Views: 51.4ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/dashboard/home" for 127.0.0.1 at 2018-03-19 13:18:44 +0500
+Processing by DashboardController#home as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering dashboard/home.html.erb within layouts/application
+  [1m[36mProject Load (0.4ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."manager_id" = $1[0m  [["manager_id", 1]]
+  Rendered dashboard/home.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 34ms (Views: 30.2ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/dashboard/home" for 127.0.0.1 at 2018-03-19 13:18:44 +0500
+Processing by DashboardController#home as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering dashboard/home.html.erb within layouts/application
+  [1m[36mProject Load (0.3ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."manager_id" = $1[0m  [["manager_id", 1]]
+  Rendered dashboard/home.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 25ms (Views: 22.9ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/dashboard/home" for 127.0.0.1 at 2018-03-19 13:18:45 +0500
+Processing by DashboardController#home as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering dashboard/home.html.erb within layouts/application
+  [1m[36mProject Load (0.3ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."manager_id" = $1[0m  [["manager_id", 1]]
+  Rendered dashboard/home.html.erb within layouts/application (4.4ms)
+Completed 200 OK in 42ms (Views: 37.3ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/dashboard/home" for 127.0.0.1 at 2018-03-19 13:18:46 +0500
+Processing by DashboardController#home as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering dashboard/home.html.erb within layouts/application
+  [1m[36mProject Load (0.4ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."manager_id" = $1[0m  [["manager_id", 1]]
+  Rendered dashboard/home.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 43ms (Views: 39.3ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/dashboard/home" for 127.0.0.1 at 2018-03-19 13:18:46 +0500
+Processing by DashboardController#home as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering dashboard/home.html.erb within layouts/application
+  [1m[36mProject Load (0.4ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."manager_id" = $1[0m  [["manager_id", 1]]
+  Rendered dashboard/home.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 36ms (Views: 32.9ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/dashboard/home" for 127.0.0.1 at 2018-03-19 13:19:00 +0500
+Processing by DashboardController#home as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering dashboard/home.html.erb within layouts/application
+  [1m[36mProject Load (0.5ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."manager_id" = $1[0m  [["manager_id", 1]]
+  Rendered dashboard/home.html.erb within layouts/application (4.2ms)
+Completed 200 OK in 42ms (Views: 39.0ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/dashboard/home" for 127.0.0.1 at 2018-03-19 13:19:36 +0500
+Processing by DashboardController#home as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering dashboard/home.html.erb within layouts/application
+  [1m[36mProject Load (0.6ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."manager_id" = $1[0m  [["manager_id", 1]]
+  Rendered dashboard/home.html.erb within layouts/application (7.5ms)
+Completed 200 OK in 53ms (Views: 47.3ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/dashboard/home" for 127.0.0.1 at 2018-03-19 13:19:37 +0500
+Processing by DashboardController#home as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering dashboard/home.html.erb within layouts/application
+  [1m[36mProject Load (0.4ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."manager_id" = $1[0m  [["manager_id", 1]]
+  Rendered dashboard/home.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 35ms (Views: 30.9ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/dashboard/home" for 127.0.0.1 at 2018-03-19 13:19:38 +0500
+Processing by DashboardController#home as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering dashboard/home.html.erb within layouts/application
+  [1m[36mProject Load (0.7ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."manager_id" = $1[0m  [["manager_id", 1]]
+  Rendered dashboard/home.html.erb within layouts/application (7.2ms)
+Completed 200 OK in 50ms (Views: 45.2ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/dashboard/home" for 127.0.0.1 at 2018-03-19 13:19:38 +0500
+Processing by DashboardController#home as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering dashboard/home.html.erb within layouts/application
+  [1m[36mProject Load (0.3ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."manager_id" = $1[0m  [["manager_id", 1]]
+  Rendered dashboard/home.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 33ms (Views: 29.5ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/dashboard/home" for 127.0.0.1 at 2018-03-19 13:19:38 +0500
+Processing by DashboardController#home as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering dashboard/home.html.erb within layouts/application
+  [1m[36mProject Load (0.3ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."manager_id" = $1[0m  [["manager_id", 1]]
+  Rendered dashboard/home.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 34ms (Views: 31.5ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/dashboard/home" for 127.0.0.1 at 2018-03-19 13:20:17 +0500
+Processing by DashboardController#home as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering dashboard/home.html.erb within layouts/application
+  [1m[36mProject Load (0.4ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."manager_id" = $1[0m  [["manager_id", 1]]
+  Rendered dashboard/home.html.erb within layouts/application (5.1ms)
+Completed 200 OK in 54ms (Views: 49.8ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/dashboard/home" for 127.0.0.1 at 2018-03-19 13:20:47 +0500
+Processing by DashboardController#home as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering dashboard/home.html.erb within layouts/application
+  [1m[36mProject Load (1.9ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."manager_id" = $1[0m  [["manager_id", 1]]
+  Rendered dashboard/home.html.erb within layouts/application (6.9ms)
+Completed 200 OK in 41ms (Views: 34.0ms | ActiveRecord: 2.4ms)
+
+
+Started GET "/dashboard/home" for 127.0.0.1 at 2018-03-19 13:20:48 +0500
+Processing by DashboardController#home as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering dashboard/home.html.erb within layouts/application
+  [1m[36mProject Load (0.4ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."manager_id" = $1[0m  [["manager_id", 1]]
+  Rendered dashboard/home.html.erb within layouts/application (4.6ms)
+Completed 200 OK in 48ms (Views: 44.0ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/projects/new" for 127.0.0.1 at 2018-03-19 13:20:51 +0500
+Processing by ProjectsController#new as HTML
+  Rendering projects/new.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."role" = $1[0m  [["role", "Developer"]]
+  Rendered projects/new.html.erb within layouts/application (3.3ms)
+Completed 200 OK in 39ms (Views: 36.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/projects/new" for 127.0.0.1 at 2018-03-19 13:22:23 +0500
+Processing by ProjectsController#new as HTML
+  Rendering projects/new.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."role" = $1[0m  [["role", "Developer"]]
+  Rendered projects/new.html.erb within layouts/application (3.2ms)
+Completed 200 OK in 30ms (Views: 28.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/projects/new" for 127.0.0.1 at 2018-03-19 13:23:22 +0500
+Processing by ProjectsController#new as HTML
+  Rendering projects/new.html.erb within layouts/application
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."role" = $1[0m  [["role", "Developer"]]
+  Rendered projects/new.html.erb within layouts/application (4.8ms)
+Completed 200 OK in 42ms (Views: 39.5ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/projects/new" for 127.0.0.1 at 2018-03-19 13:23:23 +0500
+Processing by ProjectsController#new as HTML
+  Rendering projects/new.html.erb within layouts/application
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."role" = $1[0m  [["role", "Developer"]]
+  Rendered projects/new.html.erb within layouts/application (4.6ms)
+Completed 200 OK in 35ms (Views: 33.4ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/projects/new" for 127.0.0.1 at 2018-03-19 13:23:24 +0500
+Processing by ProjectsController#new as HTML
+  Rendering projects/new.html.erb within layouts/application
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."role" = $1[0m  [["role", "Developer"]]
+  Rendered projects/new.html.erb within layouts/application (4.8ms)
+Completed 200 OK in 56ms (Views: 41.4ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/projects/new" for 127.0.0.1 at 2018-03-19 13:23:24 +0500
+Processing by ProjectsController#new as HTML
+  Rendering projects/new.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."role" = $1[0m  [["role", "Developer"]]
+  Rendered projects/new.html.erb within layouts/application (3.3ms)
+Completed 200 OK in 30ms (Views: 28.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/projects/new" for 127.0.0.1 at 2018-03-19 13:23:24 +0500
+Processing by ProjectsController#new as HTML
+  Rendering projects/new.html.erb within layouts/application
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."role" = $1[0m  [["role", "Developer"]]
+  Rendered projects/new.html.erb within layouts/application (3.1ms)
+Completed 200 OK in 27ms (Views: 25.9ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/projects/new" for 127.0.0.1 at 2018-03-19 13:23:24 +0500
+Processing by ProjectsController#new as HTML
+  Rendering projects/new.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."role" = $1[0m  [["role", "Developer"]]
+  Rendered projects/new.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 31ms (Views: 30.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-03-19 13:25:37 +0500
+Processing by UsersController#login as HTML
+  Rendering users/login.html.erb within layouts/application
+  Rendered users/login.html.erb within layouts/application (4.8ms)
+Completed 200 OK in 45ms (Views: 43.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/process_login" for 127.0.0.1 at 2018-03-19 13:25:44 +0500
+Processing by UsersController#process_login as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"iZc2EGih5obKqEbhZ9O37+dPycktMfJ/uZOVGKgHsIVye14VTnZge2LOMUpgznQDiyjrTH4J32ZS8t/Mwi+DbQ==", "user"=>{"email"=>"shahrukh@k.com", "password"=>"[FILTERED]"}, "commit"=>"Submit"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 AND "users"."password" = $2[0m  [["email", "shahrukh@k.com"], ["password", "123456"]]
+Redirected to http://localhost:3000/dashboard/home
+Completed 302 Found in 3ms (ActiveRecord: 0.4ms)
+
+
+Started GET "/dashboard/home" for 127.0.0.1 at 2018-03-19 13:25:44 +0500
+Processing by DashboardController#home as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering dashboard/home.html.erb within layouts/application
+  [1m[36mProject Load (0.3ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."manager_id" = $1[0m  [["manager_id", 1]]
+  Rendered dashboard/home.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 30ms (Views: 27.3ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/projects/new" for 127.0.0.1 at 2018-03-19 13:25:45 +0500
+Processing by ProjectsController#new as HTML
+  Rendering projects/new.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."role" = $1[0m  [["role", "Developer"]]
+  Rendered projects/new.html.erb within layouts/application (3.2ms)
+Completed 200 OK in 42ms (Views: 40.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/dashboard/home" for 127.0.0.1 at 2018-03-19 13:28:07 +0500
+Processing by DashboardController#home as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering dashboard/home.html.erb within layouts/application
+  [1m[36mProject Load (0.3ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."manager_id" = $1[0m  [["manager_id", 1]]
+  Rendered dashboard/home.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 28ms (Views: 24.6ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/bugs/show/5" for 127.0.0.1 at 2018-03-19 13:28:08 +0500
+Processing by BugsController#show as HTML
+  Parameters: {"id"=>"5"}
+  Rendering bugs/show.html.erb within layouts/application
+  [1m[36mBug Load (0.9ms)[0m  [1m[34mSELECT "bugs".* FROM "bugs" WHERE "bugs"."project_id" = $1[0m  [["project_id", 5]]
+  Rendered bugs/show.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 58ms (Views: 36.0ms | ActiveRecord: 4.5ms)
+
+
+Started GET "/users/logout" for 127.0.0.1 at 2018-03-19 13:35:41 +0500
+Processing by UsersController#logout as HTML
+Redirected to http://localhost:3000/users/login
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users/login" for 127.0.0.1 at 2018-03-19 13:35:42 +0500
+Processing by UsersController#login as HTML
+  Rendering users/login.html.erb within layouts/application
+  Rendered users/login.html.erb within layouts/application (3.2ms)
+Completed 200 OK in 33ms (Views: 31.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2018-03-19 13:35:43 +0500
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (3.1ms)
+Completed 200 OK in 32ms (Views: 30.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2018-03-19 13:35:58 +0500
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (3.6ms)
+Completed 200 OK in 44ms (Views: 41.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/signup" for 127.0.0.1 at 2018-03-19 13:36:18 +0500
+Processing by UsersController#signup as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"JcI3Q6S0e/8oiCIXB2E/gDngXstBJotvLhrOaykTWc785GqaFTvAJkdRlXiyzK/n6qCFTpSbmcUktBu3pQD3RQ==", "user"=>{"name"=>"shahrukh", "email"=>"s@ke.com", "password"=>"[FILTERED]"}, "role"=>"Developer", "commit"=>"Submit"}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (44.0ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "password", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "shahrukh"], ["email", "s@ke.com"], ["password", "123456"], ["created_at", "2018-03-19 08:36:18.829612"], ["updated_at", "2018-03-19 08:36:18.829612"]]
+  [1m[35m (56.5ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/users/login
+Completed 302 Found in 108ms (ActiveRecord: 100.7ms)
+
+
+Started GET "/users/login" for 127.0.0.1 at 2018-03-19 13:36:18 +0500
+Processing by UsersController#login as HTML
+  Rendering users/login.html.erb within layouts/application
+  Rendered users/login.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 24ms (Views: 22.7ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/process_login" for 127.0.0.1 at 2018-03-19 13:36:26 +0500
+Processing by UsersController#process_login as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"8GXjEKgOUCE+P1iF6DKJhcqSzyzoWVbACwcMonKeOUefXQK+kbek/dZR1Hu6ByjojLGa6D8rtOjVcvsrb5lv/A==", "user"=>{"email"=>"shahrukh@k.com", "password"=>"[FILTERED]"}, "commit"=>"Submit"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 AND "users"."password" = $2[0m  [["email", "shahrukh@k.com"], ["password", "123456"]]
+Redirected to http://localhost:3000/dashboard/home
+Completed 302 Found in 4ms (ActiveRecord: 0.4ms)
+
+
+Started GET "/dashboard/home" for 127.0.0.1 at 2018-03-19 13:36:26 +0500
+Processing by DashboardController#home as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering dashboard/home.html.erb within layouts/application
+  [1m[36mProject Load (0.3ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."manager_id" = $1[0m  [["manager_id", 1]]
+  Rendered dashboard/home.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 33ms (Views: 29.7ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/projects/new" for 127.0.0.1 at 2018-03-19 13:36:29 +0500
+Processing by ProjectsController#new as HTML
+  Rendering projects/new.html.erb within layouts/application
+  [1m[36mUser Load (2.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."role" = $1[0m  [["role", "Developer"]]
+  Rendered projects/new.html.erb within layouts/application (8.0ms)
+Completed 200 OK in 42ms (Views: 37.9ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/users/logout" for 127.0.0.1 at 2018-03-19 13:36:36 +0500
+Processing by UsersController#logout as HTML
+Redirected to http://localhost:3000/users/login
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users/login" for 127.0.0.1 at 2018-03-19 13:36:36 +0500
+Processing by UsersController#login as HTML
+  Rendering users/login.html.erb within layouts/application
+  Rendered users/login.html.erb within layouts/application (4.4ms)
+Completed 200 OK in 36ms (Views: 34.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2018-03-19 13:36:37 +0500
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (4.8ms)
+Completed 200 OK in 43ms (Views: 41.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/signup" for 127.0.0.1 at 2018-03-19 13:36:52 +0500
+Processing by UsersController#signup as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"HK+hKYR2xUKq7eLrEDq3jXtx1n61ZjtVG1ETA8lSqqKcWIdN5q7mgbEPw76uYYGMqK00WSUAzGGUMXSsbZoOQg==", "user"=>{"name"=>"shahrukh", "email"=>"s2@kehk.com", "password"=>"[FILTERED]"}, "role"=>"Developer", "commit"=>"Submit"}
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "password", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "shahrukh"], ["email", "s2@kehk.com"], ["password", "123456"], ["created_at", "2018-03-19 08:36:52.353645"], ["updated_at", "2018-03-19 08:36:52.353645"]]
+  [1m[35m (50.4ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/users/login
+Completed 302 Found in 55ms (ActiveRecord: 51.3ms)
+
+
+Started GET "/users/login" for 127.0.0.1 at 2018-03-19 13:36:52 +0500
+Processing by UsersController#login as HTML
+  Rendering users/login.html.erb within layouts/application
+  Rendered users/login.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 26ms (Views: 25.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/process_login" for 127.0.0.1 at 2018-03-19 13:36:58 +0500
+Processing by UsersController#process_login as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"fIBLOu+IcldtU5TZxv2aeWF46CrBXL3Tm9Y3Ctb6wMTl+vci7VJvZE73V2xQya2g1/J+XbcxiJCK7mAWpW3MOQ==", "user"=>{"email"=>"shahrukh@k.com", "password"=>"[FILTERED]"}, "commit"=>"Submit"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 AND "users"."password" = $2[0m  [["email", "shahrukh@k.com"], ["password", "123456"]]
+Redirected to http://localhost:3000/dashboard/home
+Completed 302 Found in 3ms (ActiveRecord: 0.5ms)
+
+
+Started GET "/dashboard/home" for 127.0.0.1 at 2018-03-19 13:36:58 +0500
+Processing by DashboardController#home as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering dashboard/home.html.erb within layouts/application
+  [1m[36mProject Load (0.3ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."manager_id" = $1[0m  [["manager_id", 1]]
+  Rendered dashboard/home.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 27ms (Views: 24.9ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/projects/new" for 127.0.0.1 at 2018-03-19 13:36:59 +0500
+Processing by ProjectsController#new as HTML
+  Rendering projects/new.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."role" = $1[0m  [["role", "Developer"]]
+  Rendered projects/new.html.erb within layouts/application (4.1ms)
+Completed 200 OK in 37ms (Views: 34.7ms | ActiveRecord: 0.4ms)
+
+
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" LIMIT $1[0m  [["LIMIT", 11]]
+Started GET "/users/logout" for 127.0.0.1 at 2018-03-19 13:42:05 +0500
+Processing by UsersController#logout as HTML
+Redirected to http://localhost:3000/users/login
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users/login" for 127.0.0.1 at 2018-03-19 13:42:05 +0500
+Processing by UsersController#login as HTML
+  Rendering users/login.html.erb within layouts/application
+  Rendered users/login.html.erb within layouts/application (5.5ms)
+Completed 200 OK in 43ms (Views: 40.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2018-03-19 13:42:10 +0500
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (3.8ms)
+Completed 200 OK in 42ms (Views: 39.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2018-03-19 13:43:44 +0500
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (3.2ms)
+Completed 200 OK in 36ms (Views: 35.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2018-03-19 13:44:03 +0500
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (3.7ms)
+Completed 200 OK in 37ms (Views: 35.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/signup" for 127.0.0.1 at 2018-03-19 13:44:19 +0500
+Processing by UsersController#signup as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"NJ5maYgvi/+ljWt0cmU/r1wGnxF3kDoESPX9mdFbrpPlc0GR5buZsVmeY5y5rKCkOeEee9AsltR/A2z2DW6WRw==", "user"=>{"name"=>"sufi", "email"=>"sufi@s.com", "password"=>"[FILTERED]"}, "role"=>"Developer", "commit"=>"Submit"}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "password", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "sufi"], ["email", "sufi@s.com"], ["password", "123456"], ["created_at", "2018-03-19 08:44:20.001177"], ["updated_at", "2018-03-19 08:44:20.001177"]]
+  [1m[35m (34.5ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/users/login
+Completed 302 Found in 41ms (ActiveRecord: 35.3ms)
+
+
+Started GET "/users/login" for 127.0.0.1 at 2018-03-19 13:44:20 +0500
+Processing by UsersController#login as HTML
+  Rendering users/login.html.erb within layouts/application
+  Rendered users/login.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 20ms (Views: 19.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/process_login" for 127.0.0.1 at 2018-03-19 13:44:26 +0500
+Processing by UsersController#process_login as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"LH7wZih/AjYx8XDwRqVuNa4Tn7+QspJB1gEl/2Rd58QqIPEt8Y2W6Q8/QR/CZ1mvN76Ifr3gih9biTr35CAoAw==", "user"=>{"email"=>"shahrukh@k.com", "password"=>"[FILTERED]"}, "commit"=>"Submit"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 AND "users"."password" = $2[0m  [["email", "shahrukh@k.com"], ["password", "123456"]]
+Redirected to http://localhost:3000/dashboard/home
+Completed 302 Found in 3ms (ActiveRecord: 0.5ms)
+
+
+Started GET "/dashboard/home" for 127.0.0.1 at 2018-03-19 13:44:26 +0500
+Processing by DashboardController#home as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering dashboard/home.html.erb within layouts/application
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."manager_id" = $1[0m  [["manager_id", 1]]
+  Rendered dashboard/home.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 28ms (Views: 25.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/projects/new" for 127.0.0.1 at 2018-03-19 13:44:30 +0500
+Processing by ProjectsController#new as HTML
+  Rendering projects/new.html.erb within layouts/application
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."role" = $1[0m  [["role", "Developer"]]
+  Rendered projects/new.html.erb within layouts/application (6.7ms)
+Completed 200 OK in 48ms (Views: 45.0ms | ActiveRecord: 0.8ms)
+
+
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" LIMIT $1[0m  [["LIMIT", 11]]
+Started GET "/users/logout" for 127.0.0.1 at 2018-03-19 13:44:53 +0500
+Processing by UsersController#logout as HTML
+Redirected to http://localhost:3000/users/login
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users/login" for 127.0.0.1 at 2018-03-19 13:44:53 +0500
+Processing by UsersController#login as HTML
+  Rendering users/login.html.erb within layouts/application
+  Rendered users/login.html.erb within layouts/application (3.3ms)
+Completed 200 OK in 40ms (Views: 38.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2018-03-19 13:44:58 +0500
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (3.6ms)
+Completed 200 OK in 40ms (Views: 38.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/signup" for 127.0.0.1 at 2018-03-19 13:49:25 +0500
+Processing by UsersController#signup as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"f7Zi6Qa0LQGCuYfypHz7ZPVcPmqAtkqgWqyv0IxEXhBhIIwXpFLXQcK7lTnL0vwSPm2Yfc4AYLIJRbuULawdGw==", "user"=>{"name"=>"test", "email"=>"test@test.com", "password"=>"[FILTERED]"}, "role"=>"Developer", "commit"=>"Submit"}
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "password", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "test"], ["email", "test@test.com"], ["password", "123456"], ["created_at", "2018-03-19 08:49:25.195243"], ["updated_at", "2018-03-19 08:49:25.195243"]]
+  [1m[35m (52.0ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/users/login
+Completed 302 Found in 59ms (ActiveRecord: 53.0ms)
+
+
+Started GET "/users/login" for 127.0.0.1 at 2018-03-19 13:49:25 +0500
+Processing by UsersController#login as HTML
+  Rendering users/login.html.erb within layouts/application
+  Rendered users/login.html.erb within layouts/application (3.2ms)
+Completed 200 OK in 38ms (Views: 36.7ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/process_login" for 127.0.0.1 at 2018-03-19 13:49:33 +0500
+Processing by UsersController#process_login as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"l1BX2QothgxfhJ9/Ng7aeVkOgb7JDrwmv/i8JEAlcoKMA9pDyIFDyDawD+estpdY+e3bFwBu/ooeK2xLucvQog==", "user"=>{"email"=>"test@test.com", "password"=>"[FILTERED]"}, "commit"=>"Submit"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 AND "users"."password" = $2[0m  [["email", "test@test.com"], ["password", "123456"]]
+Redirected to http://localhost:3000/dashboard/home
+Completed 302 Found in 5ms (ActiveRecord: 0.7ms)
+
+
+Started GET "/dashboard/home" for 127.0.0.1 at 2018-03-19 13:49:33 +0500
+Processing by DashboardController#home as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  Rendering dashboard/home.html.erb within layouts/application
+  [1m[36mProject Load (33.5ms)[0m  [1m[34mSELECT "projects".* FROM "projects" INNER JOIN "project_users" ON "projects"."id" = "project_users"."project_id" WHERE "project_users"."user_id" = $1[0m  [["user_id", 7]]
+  Rendered dashboard/home.html.erb within layouts/application (99.5ms)
+Completed 200 OK in 198ms (Views: 99.4ms | ActiveRecord: 36.1ms)
+
+
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" LIMIT $1[0m  [["LIMIT", 11]]
+Started GET "/dashboard/home" for 127.0.0.1 at 2018-03-19 13:50:18 +0500
+Processing by DashboardController#home as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  Rendering dashboard/home.html.erb within layouts/application
+  [1m[36mProject Load (0.6ms)[0m  [1m[34mSELECT "projects".* FROM "projects" INNER JOIN "project_users" ON "projects"."id" = "project_users"."project_id" WHERE "project_users"."user_id" = $1[0m  [["user_id", 7]]
+  Rendered dashboard/home.html.erb within layouts/application (3.1ms)
+Completed 200 OK in 29ms (Views: 25.1ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/users/logout" for 127.0.0.1 at 2018-03-19 13:50:20 +0500
+Processing by UsersController#logout as HTML
+Redirected to http://localhost:3000/users/login
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users/login" for 127.0.0.1 at 2018-03-19 13:50:20 +0500
+Processing by UsersController#login as HTML
+  Rendering users/login.html.erb within layouts/application
+  Rendered users/login.html.erb within layouts/application (3.7ms)
+Completed 200 OK in 39ms (Views: 37.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2018-03-19 13:50:21 +0500
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 30ms (Views: 28.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2018-03-19 13:50:34 +0500
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (3.9ms)
+Completed 200 OK in 33ms (Views: 31.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2018-03-19 13:50:35 +0500
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 40ms (Views: 38.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2018-03-19 13:50:35 +0500
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (3.4ms)
+Completed 200 OK in 36ms (Views: 35.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2018-03-19 13:50:46 +0500
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 24ms (Views: 22.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2018-03-19 13:56:06 +0500
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (5.1ms)
+Completed 200 OK in 43ms (Views: 41.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/projects/new" for 127.0.0.1 at 2018-03-19 13:56:14 +0500
+Processing by ProjectsController#new as HTML
+Redirected to http://localhost:3000/users/login
+Filter chain halted as :require_login rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users/login" for 127.0.0.1 at 2018-03-19 13:56:14 +0500
+Processing by UsersController#login as HTML
+  Rendering users/login.html.erb within layouts/application
+  Rendered users/login.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 32ms (Views: 30.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2018-03-19 13:56:21 +0500
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 29ms (Views: 28.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/signup" for 127.0.0.1 at 2018-03-19 13:57:01 +0500
+Processing by UsersController#signup as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"xuU/UILTJObaH6Gh2Y+VlpA53UOPexCr7ARfQ/Xj+YRwO+fpPreM646JBCCi+S5Fr1ibvgQGVEMu+VsUBNX2/g==", "user"=>{"name"=>"new", "email"=>"new@new.com", "password"=>"[FILTERED]"}, "role"=>"Developer", "commit"=>"Submit"}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.8ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "password", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "new"], ["email", "new@new.com"], ["password", "123456"], ["created_at", "2018-03-19 08:57:01.892776"], ["updated_at", "2018-03-19 08:57:01.892776"]]
+  [1m[35m (39.4ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/users/login
+Completed 302 Found in 47ms (ActiveRecord: 40.4ms)
+
+
+Started GET "/users/login" for 127.0.0.1 at 2018-03-19 13:57:01 +0500
+Processing by UsersController#login as HTML
+  Rendering users/login.html.erb within layouts/application
+  Rendered users/login.html.erb within layouts/application (3.3ms)
+Completed 200 OK in 30ms (Views: 28.2ms | ActiveRecord: 0.0ms)
+
+
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+Started GET "/users/new" for 127.0.0.1 at 2018-03-19 13:58:04 +0500
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (154.7ms)
+Completed 500 Internal Server Error in 158ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `select_tag' for #<ActionView::Helpers::FormBuilder:0x00007f929d5442c8>
+Did you mean?  select):
+    11: 
+    12: 
+    13:   <%= label_tag :"Role:" %>: <%= 
+    14: f.select_tag(:role, '<option value="Manager">Manager</option><option value="Developer">Developer</option><option value="QA">QA</option>'.html_safe) %>
+    15: 
+    16: 
+    17:   <%= f.submit "Submit" %>
+  
+app/views/users/new.html.erb:14:in `block in _app_views_users_new_html_erb__107761512562890257_70133840933020'
+app/views/users/new.html.erb:2:in `_app_views_users_new_html_erb__107761512562890257_70133840933020'
+Started GET "/users/new" for 127.0.0.1 at 2018-03-19 14:04:11 +0500
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (24.5ms)
+Completed 200 OK in 56ms (Views: 53.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/signup" for 127.0.0.1 at 2018-03-19 14:04:30 +0500
+Processing by UsersController#signup as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"cN0Vjz0iiBvEP0Pok+ZskFBBg2sxhx6S2ox0wgkfIj7GA802gUYgFpCp5mnokNdDbyDFlrr6WnoYcXCV+CktRA==", "user"=>{"name"=>"test user", "email"=>"test@user.com", "password"=>"[FILTERED]", "role"=>"Developer"}, "commit"=>"Submit"}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.8ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "role", "password", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "test user"], ["email", "test@user.com"], ["role", "Developer"], ["password", "123456"], ["created_at", "2018-03-19 09:04:30.772314"], ["updated_at", "2018-03-19 09:04:30.772314"]]
+  [1m[35m (35.4ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/users/login
+Completed 302 Found in 44ms (ActiveRecord: 36.4ms)
+
+
+Started GET "/users/login" for 127.0.0.1 at 2018-03-19 14:04:30 +0500
+Processing by UsersController#login as HTML
+  Rendering users/login.html.erb within layouts/application
+  Rendered users/login.html.erb within layouts/application (4.9ms)
+Completed 200 OK in 36ms (Views: 33.7ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/process_login" for 127.0.0.1 at 2018-03-19 14:04:37 +0500
+Processing by UsersController#process_login as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"O8LJR6Ekx12GFSmxDqQ6E7CijK5MFsAI1Ko79VqwRm5KP0Zh9eavJF590W5FpcpTIn/I6kD+/CgiCcVKkpB8UQ==", "user"=>{"email"=>"shahrukh@k.com", "password"=>"[FILTERED]"}, "commit"=>"Submit"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 AND "users"."password" = $2[0m  [["email", "shahrukh@k.com"], ["password", "123456"]]
+Redirected to http://localhost:3000/dashboard/home
+Completed 302 Found in 4ms (ActiveRecord: 0.5ms)
+
+
+Started GET "/dashboard/home" for 127.0.0.1 at 2018-03-19 14:04:37 +0500
+Processing by DashboardController#home as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering dashboard/home.html.erb within layouts/application
+  [1m[36mProject Load (0.3ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."manager_id" = $1[0m  [["manager_id", 1]]
+  Rendered dashboard/home.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 32ms (Views: 29.1ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/projects/new" for 127.0.0.1 at 2018-03-19 14:04:46 +0500
+Processing by ProjectsController#new as HTML
+  Rendering projects/new.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."role" = $1[0m  [["role", "Developer"]]
+  Rendered projects/new.html.erb within layouts/application (3.5ms)
+Completed 200 OK in 30ms (Views: 28.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/users/logout" for 127.0.0.1 at 2018-03-19 14:04:51 +0500
+Processing by UsersController#logout as HTML
+Redirected to http://localhost:3000/users/login
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users/login" for 127.0.0.1 at 2018-03-19 14:04:51 +0500
+Processing by UsersController#login as HTML
+  Rendering users/login.html.erb within layouts/application
+  Rendered users/login.html.erb within layouts/application (4.3ms)
+Completed 200 OK in 42ms (Views: 40.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/login" for 127.0.0.1 at 2018-03-19 14:05:13 +0500
+Processing by UsersController#login as HTML
+  Rendering users/login.html.erb within layouts/application
+  Rendered users/login.html.erb within layouts/application (4.6ms)
+Completed 200 OK in 42ms (Views: 40.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/process_login" for 127.0.0.1 at 2018-03-19 14:05:19 +0500
+Processing by UsersController#process_login as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"cA4xprTYGXShVd7zHn8iOtSjOOy++R/1CmV9DTHgDIdL3wr/hrjq/Dn5EQlGyrta4A8Y+FJIe5VqA6hNuhkpwg==", "user"=>{"email"=>"shahrukh@k.com", "password"=>"[FILTERED]"}, "commit"=>"Submit"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 AND "users"."password" = $2[0m  [["email", "shahrukh@k.com"], ["password", "123456"]]
+Redirected to http://localhost:3000/dashboard/home
+Completed 302 Found in 4ms (ActiveRecord: 0.7ms)
+
+
+Started GET "/dashboard/home" for 127.0.0.1 at 2018-03-19 14:05:19 +0500
+Processing by DashboardController#home as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering dashboard/home.html.erb within layouts/application
+  [1m[36mProject Load (0.3ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."manager_id" = $1[0m  [["manager_id", 1]]
+  Rendered dashboard/home.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 32ms (Views: 29.3ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/dashboard/project_details/5" for 127.0.0.1 at 2018-03-19 14:05:21 +0500
+Processing by DashboardController#project_details as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mProject Load (0.4ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering dashboard/project_details.html.erb within layouts/application
+  [1m[36mUser Load (15.5ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "project_users" ON "users"."id" = "project_users"."user_id" WHERE "project_users"."project_id" = $1[0m  [["project_id", 5]]
+  Rendered dashboard/project_details.html.erb within layouts/application (24.5ms)
+Completed 200 OK in 120ms (Views: 47.7ms | ActiveRecord: 16.4ms)
+
+
+Started GET "/bugs/show/5" for 127.0.0.1 at 2018-03-19 14:05:24 +0500
+Processing by BugsController#show as HTML
+  Parameters: {"id"=>"5"}
+  Rendering bugs/show.html.erb within layouts/application
+  [1m[36mBug Load (0.5ms)[0m  [1m[34mSELECT "bugs".* FROM "bugs" WHERE "bugs"."project_id" = $1[0m  [["project_id", 5]]
+  Rendered bugs/show.html.erb within layouts/application (3.1ms)
+Completed 200 OK in 34ms (Views: 32.2ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/dashboard/project_details/5" for 127.0.0.1 at 2018-03-19 14:05:27 +0500
+Processing by DashboardController#project_details as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mProject Load (0.5ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering dashboard/project_details.html.erb within layouts/application
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "project_users" ON "users"."id" = "project_users"."user_id" WHERE "project_users"."project_id" = $1[0m  [["project_id", 5]]
+  Rendered dashboard/project_details.html.erb within layouts/application (4.7ms)
+Completed 200 OK in 61ms (Views: 54.5ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/bugs/show/5" for 127.0.0.1 at 2018-03-19 14:05:31 +0500
+Processing by BugsController#show as HTML
+  Parameters: {"id"=>"5"}
+  Rendering bugs/show.html.erb within layouts/application
+  [1m[36mBug Load (0.6ms)[0m  [1m[34mSELECT "bugs".* FROM "bugs" WHERE "bugs"."project_id" = $1[0m  [["project_id", 5]]
+  Rendered bugs/show.html.erb within layouts/application (3.1ms)
+Completed 200 OK in 29ms (Views: 26.4ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/dashboard/project_details/5" for 127.0.0.1 at 2018-03-19 14:06:27 +0500
+Processing by DashboardController#project_details as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mProject Load (0.4ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering dashboard/project_details.html.erb within layouts/application
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "project_users" ON "users"."id" = "project_users"."user_id" WHERE "project_users"."project_id" = $1[0m  [["project_id", 5]]
+  Rendered dashboard/project_details.html.erb within layouts/application (4.6ms)
+Completed 200 OK in 37ms (Views: 29.5ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/users/logout" for 127.0.0.1 at 2018-03-19 14:07:50 +0500
+Processing by UsersController#logout as HTML
+Redirected to http://localhost:3000/users/login
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users/login" for 127.0.0.1 at 2018-03-19 14:07:50 +0500
+Processing by UsersController#login as HTML
+  Rendering users/login.html.erb within layouts/application
+  Rendered users/login.html.erb within layouts/application (6.0ms)
+Completed 200 OK in 59ms (Views: 57.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2018-03-19 14:07:51 +0500
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (5.3ms)
+Completed 200 OK in 53ms (Views: 49.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2018-03-19 14:08:52 +0500
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (4.7ms)
+Completed 200 OK in 41ms (Views: 39.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/process_login" for 127.0.0.1 at 2018-03-19 14:10:29 +0500
+Processing by UsersController#process_login as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"uvkFA/vB8V4EOkjE03kiIfZpsSP4o+q9czegoBcG6cLWXCiX0XMX+TW2IbyPWzlNoeiWg7wtN2hPm2iqDqi4eQ==", "user"=>{"email"=>"shahrukh@k.com", "password"=>"[FILTERED]"}, "commit"=>"Submit"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 AND "users"."password" = $2[0m  [["email", "shahrukh@k.com"], ["password", "123456"]]
+Redirected to http://localhost:3000/dashboard/home
+Completed 302 Found in 6ms (ActiveRecord: 0.5ms)
+
+
+Started GET "/dashboard/home" for 127.0.0.1 at 2018-03-19 14:10:29 +0500
+Processing by DashboardController#home as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering dashboard/home.html.erb within layouts/application
+  [1m[36mProject Load (0.3ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."manager_id" = $1[0m  [["manager_id", 1]]
+  Rendered dashboard/home.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 50ms (Views: 27.6ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/dashboard/project_details/5" for 127.0.0.1 at 2018-03-19 14:10:34 +0500
+Processing by DashboardController#project_details as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mProject Load (0.4ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering dashboard/project_details.html.erb within layouts/application
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "project_users" ON "users"."id" = "project_users"."user_id" WHERE "project_users"."project_id" = $1[0m  [["project_id", 5]]
+  Rendered dashboard/project_details.html.erb within layouts/application (4.9ms)
+Completed 200 OK in 43ms (Views: 34.3ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/dashboard/project_details/5" for 127.0.0.1 at 2018-03-19 14:11:11 +0500
+Processing by DashboardController#project_details as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mProject Load (0.3ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering dashboard/project_details.html.erb within layouts/application
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "project_users" ON "users"."id" = "project_users"."user_id" WHERE "project_users"."project_id" = $1[0m  [["project_id", 5]]
+  Rendered dashboard/project_details.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 37ms (Views: 32.2ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/dashboard/home" for 127.0.0.1 at 2018-03-19 14:11:13 +0500
+Processing by DashboardController#home as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering dashboard/home.html.erb within layouts/application
+  [1m[36mProject Load (0.4ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."manager_id" = $1[0m  [["manager_id", 1]]
+  Rendered dashboard/home.html.erb within layouts/application (3.8ms)
+Completed 200 OK in 30ms (Views: 26.4ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/bugs/show/5" for 127.0.0.1 at 2018-03-19 14:11:14 +0500
+Processing by BugsController#show as HTML
+  Parameters: {"id"=>"5"}
+  Rendering bugs/show.html.erb within layouts/application
+  [1m[36mBug Load (0.4ms)[0m  [1m[34mSELECT "bugs".* FROM "bugs" WHERE "bugs"."project_id" = $1[0m  [["project_id", 5]]
+  Rendered bugs/show.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 26ms (Views: 23.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/bugs/show/5" for 127.0.0.1 at 2018-03-19 14:12:21 +0500
+Processing by BugsController#show as HTML
+  Parameters: {"id"=>"5"}
+  Rendering bugs/show.html.erb within layouts/application
+  [1m[36mBug Load (0.3ms)[0m  [1m[34mSELECT "bugs".* FROM "bugs" WHERE "bugs"."project_id" = $1[0m  [["project_id", 5]]
+  Rendered bugs/show.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 34ms (Views: 32.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/bugs/show/5" for 127.0.0.1 at 2018-03-19 14:12:58 +0500
+Processing by BugsController#show as HTML
+  Parameters: {"id"=>"5"}
+  Rendering bugs/show.html.erb within layouts/application
+  [1m[36mBug Load (0.4ms)[0m  [1m[34mSELECT "bugs".* FROM "bugs" WHERE "bugs"."project_id" = $1[0m  [["project_id", 5]]
+  Rendered bugs/show.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 30ms (Views: 27.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/bugs/new/5" for 127.0.0.1 at 2018-03-19 14:13:01 +0500
+Processing by BugsController#new as HTML
+  Parameters: {"id"=>"5"}
+  Rendering bugs/new.html.erb within layouts/application
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered bugs/new.html.erb within layouts/application (6.9ms)
+Completed 200 OK in 43ms (Views: 40.7ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/bugs/new/5" for 127.0.0.1 at 2018-03-19 14:14:25 +0500
+Processing by BugsController#new as HTML
+  Parameters: {"id"=>"5"}
+  Rendering bugs/new.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered bugs/new.html.erb within layouts/application (4.4ms)
+Completed 200 OK in 24ms (Views: 22.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/bugs/new/5" for 127.0.0.1 at 2018-03-19 14:15:20 +0500
+Processing by BugsController#new as HTML
+  Parameters: {"id"=>"5"}
+  Rendering bugs/new.html.erb within layouts/application
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered bugs/new.html.erb within layouts/application (6.0ms)
+Completed 200 OK in 34ms (Views: 32.7ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/dashboard/home" for 127.0.0.1 at 2018-03-19 14:15:22 +0500
+Processing by DashboardController#home as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering dashboard/home.html.erb within layouts/application
+  [1m[36mProject Load (0.4ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."manager_id" = $1[0m  [["manager_id", 1]]
+  Rendered dashboard/home.html.erb within layouts/application (4.3ms)
+Completed 200 OK in 37ms (Views: 32.4ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/bugs/show/5" for 127.0.0.1 at 2018-03-19 14:15:24 +0500
+Processing by BugsController#show as HTML
+  Parameters: {"id"=>"5"}
+  Rendering bugs/show.html.erb within layouts/application
+  [1m[36mBug Load (0.6ms)[0m  [1m[34mSELECT "bugs".* FROM "bugs" WHERE "bugs"."project_id" = $1[0m  [["project_id", 5]]
+  Rendered bugs/show.html.erb within layouts/application (3.1ms)
+Completed 200 OK in 45ms (Views: 41.9ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/bugs/new/5" for 127.0.0.1 at 2018-03-19 14:15:25 +0500
+Processing by BugsController#new as HTML
+  Parameters: {"id"=>"5"}
+  Rendering bugs/new.html.erb within layouts/application
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered bugs/new.html.erb within layouts/application (6.9ms)
+Completed 200 OK in 52ms (Views: 50.0ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/bugs/create_bug" for 127.0.0.1 at 2018-03-19 14:15:51 +0500
+Processing by BugsController#create_bug as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"CGsaQJ6HydXL4sTtS2S4mqyTlWYvsdk2fh53O7bU3hxeSEiC6UJdSKh3xGC6lsg5M0wHcmOCYTK7pK40KeI9tA==", "title"=>"test bug", "description"=>"testing a bug", "type"=>"bug", "feature_status"=>"", "bug_status"=>"started", "bug"=>{"deadline"=>"2018-03-09"}, "assignto"=>"9", "picture"=>#<ActionDispatch::Http::UploadedFile:0x00007f929e7f5660 @tempfile=#<Tempfile:/tmp/RackMultipart20180319-8365-tkak3c.jpg>, @original_filename="wajih.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"picture\"; filename=\"wajih.jpg\"\r\nContent-Type: image/jpeg\r\n">, "project_id"=>"5", "commit"=>"Add"}
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  [1m[36mProject Load (0.5ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mBug Exists (10.9ms)[0m  [1m[34mSELECT  1 AS one FROM "bugs" WHERE "bugs"."title" = $1 LIMIT $2[0m  [["title", "test bug"], ["LIMIT", 1]]
+  [1m[35mSQL (29.3ms)[0m  [1m[32mINSERT INTO "bugs" ("project_id", "title", "description", "bug_type", "deadline", "screenshot", "createdby_id", "assignedto_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"[0m  [["project_id", 5], ["title", "test bug"], ["description", "testing a bug"], ["bug_type", "bug"], ["deadline", "2018-03-09"], ["screenshot", "wajih.jpg"], ["createdby_id", 1], ["assignedto_id", 9], ["created_at", "2018-03-19 09:15:51.896555"], ["updated_at", "2018-03-19 09:15:51.896555"]]
+  [1m[35m (33.2ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/dashboard/home
+Completed 302 Found in 133ms (ActiveRecord: 78.2ms)
+
+
+Started GET "/dashboard/home" for 127.0.0.1 at 2018-03-19 14:15:51 +0500
+Processing by DashboardController#home as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering dashboard/home.html.erb within layouts/application
+  [1m[36mProject Load (0.4ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."manager_id" = $1[0m  [["manager_id", 1]]
+  Rendered dashboard/home.html.erb within layouts/application (3.5ms)
+Completed 200 OK in 36ms (Views: 32.2ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/bugs/show/5" for 127.0.0.1 at 2018-03-19 14:15:54 +0500
+Processing by BugsController#show as HTML
+  Parameters: {"id"=>"5"}
+  Rendering bugs/show.html.erb within layouts/application
+  [1m[36mBug Load (1.0ms)[0m  [1m[34mSELECT "bugs".* FROM "bugs" WHERE "bugs"."project_id" = $1[0m  [["project_id", 5]]
+  Rendered bugs/show.html.erb within layouts/application (3.3ms)
+Completed 200 OK in 30ms (Views: 27.7ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/bugs/details/8" for 127.0.0.1 at 2018-03-19 14:15:56 +0500
+Processing by BugsController#details as HTML
+  Parameters: {"id"=>"8"}
+  [1m[36mBug Load (0.6ms)[0m  [1m[34mSELECT  "bugs".* FROM "bugs" WHERE "bugs"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  Rendering bugs/details.html.erb within layouts/application
+  Rendered bugs/details.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 58ms (Views: 31.7ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/dashboard/home" for 127.0.0.1 at 2018-03-19 14:16:12 +0500
+Processing by DashboardController#home as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering dashboard/home.html.erb within layouts/application
+  [1m[36mProject Load (0.4ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."manager_id" = $1[0m  [["manager_id", 1]]
+  Rendered dashboard/home.html.erb within layouts/application (4.3ms)
+Completed 200 OK in 51ms (Views: 47.7ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/bugs/show/5" for 127.0.0.1 at 2018-03-19 14:17:41 +0500
+Processing by BugsController#show as HTML
+  Parameters: {"id"=>"5"}
+  Rendering bugs/show.html.erb within layouts/application
+  [1m[36mBug Load (1.4ms)[0m  [1m[34mSELECT "bugs".* FROM "bugs" WHERE "bugs"."project_id" = $1[0m  [["project_id", 5]]
+  Rendered bugs/show.html.erb within layouts/application (5.1ms)
+Completed 200 OK in 50ms (Views: 46.3ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/bugs/details/8" for 127.0.0.1 at 2018-03-19 14:17:43 +0500
+Processing by BugsController#details as HTML
+  Parameters: {"id"=>"8"}
+  [1m[36mBug Load (0.4ms)[0m  [1m[34mSELECT  "bugs".* FROM "bugs" WHERE "bugs"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  Rendering bugs/details.html.erb within layouts/application
+  Rendered bugs/details.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 43ms (Views: 35.8ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/bugs/details/8" for 127.0.0.1 at 2018-03-19 14:19:24 +0500
+Processing by BugsController#details as HTML
+  Parameters: {"id"=>"8"}
+  [1m[36mBug Load (0.3ms)[0m  [1m[34mSELECT  "bugs".* FROM "bugs" WHERE "bugs"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  Rendering bugs/details.html.erb within layouts/application
+  Rendered bugs/details.html.erb within layouts/application (1.2ms)
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 0.6ms)
+
+
+  
+SyntaxError (/home/devsinc/Desktop/ror/bugs/app/views/bugs/details.html.erb:32: syntax error, unexpected tIDENTIFIER, expecting '}'
+screenshot , {:height => 200px , :width => 200 px} );@output
+                              ^
+/home/devsinc/Desktop/ror/bugs/app/views/bugs/details.html.erb:32: syntax error, unexpected =>, expecting &. or :: or '[' or '.'
+ {:height => 200px , :width => 200 px} );@output_buffer.safe
+                              ^
+/home/devsinc/Desktop/ror/bugs/app/views/bugs/details.html.erb:42: syntax error, unexpected keyword_ensure, expecting ')'
+          ensure
+                ^
+/home/devsinc/Desktop/ror/bugs/app/views/bugs/details.html.erb:44: syntax error, unexpected keyword_end, expecting ')'
+          end
+             ^):
+  
+app/views/bugs/details.html.erb:32: syntax error, unexpected tIDENTIFIER, expecting '}'
+app/views/bugs/details.html.erb:32: syntax error, unexpected =>, expecting &. or :: or '[' or '.'
+app/views/bugs/details.html.erb:42: syntax error, unexpected keyword_ensure, expecting ')'
+app/views/bugs/details.html.erb:44: syntax error, unexpected keyword_end, expecting ')'
+Started GET "/bugs/details/8" for 127.0.0.1 at 2018-03-19 14:20:41 +0500
+Processing by BugsController#details as HTML
+  Parameters: {"id"=>"8"}
+  [1m[36mBug Load (0.3ms)[0m  [1m[34mSELECT  "bugs".* FROM "bugs" WHERE "bugs"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  Rendering bugs/details.html.erb within layouts/application
+  Rendered bugs/details.html.erb within layouts/application (1.1ms)
+Completed 500 Internal Server Error in 8ms (ActiveRecord: 0.6ms)
+
+
+  
+SyntaxError (/home/devsinc/Desktop/ror/bugs/app/views/bugs/details.html.erb:31: syntax error, unexpected tIDENTIFIER, expecting '}'
+ , :class => {:height => 200px , :width => 200 px} );@output
+                              ^
+/home/devsinc/Desktop/ror/bugs/app/views/bugs/details.html.erb:31: syntax error, unexpected =>, expecting &. or :: or '[' or '.'
+ {:height => 200px , :width => 200 px} );@output_buffer.safe
+                              ^
+/home/devsinc/Desktop/ror/bugs/app/views/bugs/details.html.erb:41: syntax error, unexpected keyword_ensure, expecting ')'
+          ensure
+                ^
+/home/devsinc/Desktop/ror/bugs/app/views/bugs/details.html.erb:43: syntax error, unexpected keyword_end, expecting ')'
+          end
+             ^):
+  
+app/views/bugs/details.html.erb:31: syntax error, unexpected tIDENTIFIER, expecting '}'
+app/views/bugs/details.html.erb:31: syntax error, unexpected =>, expecting &. or :: or '[' or '.'
+app/views/bugs/details.html.erb:41: syntax error, unexpected keyword_ensure, expecting ')'
+app/views/bugs/details.html.erb:43: syntax error, unexpected keyword_end, expecting ')'
+Started GET "/bugs/details/8" for 127.0.0.1 at 2018-03-19 14:21:42 +0500
+Processing by BugsController#details as HTML
+  Parameters: {"id"=>"8"}
+  [1m[36mBug Load (0.4ms)[0m  [1m[34mSELECT  "bugs".* FROM "bugs" WHERE "bugs"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  Rendering bugs/details.html.erb within layouts/application
+  Rendered bugs/details.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 63ms (Views: 55.2ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/bugs/details/8" for 127.0.0.1 at 2018-03-19 14:21:54 +0500
+Processing by BugsController#details as HTML
+  Parameters: {"id"=>"8"}
+  [1m[36mBug Load (0.4ms)[0m  [1m[34mSELECT  "bugs".* FROM "bugs" WHERE "bugs"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  Rendering bugs/details.html.erb within layouts/application
+  Rendered bugs/details.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 33ms (Views: 28.2ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/bugs/details/8" for 127.0.0.1 at 2018-03-19 14:21:55 +0500
+Processing by BugsController#details as HTML
+  Parameters: {"id"=>"8"}
+  [1m[36mBug Load (0.5ms)[0m  [1m[34mSELECT  "bugs".* FROM "bugs" WHERE "bugs"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  Rendering bugs/details.html.erb within layouts/application
+  Rendered bugs/details.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 37ms (Views: 29.9ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/bugs/details/8" for 127.0.0.1 at 2018-03-19 14:21:58 +0500
+Processing by BugsController#details as HTML
+  Parameters: {"id"=>"8"}
+  [1m[36mBug Load (0.6ms)[0m  [1m[34mSELECT  "bugs".* FROM "bugs" WHERE "bugs"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  Rendering bugs/details.html.erb within layouts/application
+  Rendered bugs/details.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 34ms (Views: 27.3ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/bugs/details/8" for 127.0.0.1 at 2018-03-19 14:21:58 +0500
+Processing by BugsController#details as HTML
+  Parameters: {"id"=>"8"}
+  [1m[36mBug Load (0.3ms)[0m  [1m[34mSELECT  "bugs".* FROM "bugs" WHERE "bugs"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  Rendering bugs/details.html.erb within layouts/application
+  Rendered bugs/details.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 45ms (Views: 35.8ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/bugs/details/8" for 127.0.0.1 at 2018-03-19 14:21:58 +0500
+Processing by BugsController#details as HTML
+  Parameters: {"id"=>"8"}
+  [1m[36mBug Load (0.3ms)[0m  [1m[34mSELECT  "bugs".* FROM "bugs" WHERE "bugs"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  Rendering bugs/details.html.erb within layouts/application
+  Rendered bugs/details.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 32ms (Views: 26.6ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/bugs/details/8" for 127.0.0.1 at 2018-03-19 14:23:25 +0500
+Processing by BugsController#details as HTML
+  Parameters: {"id"=>"8"}
+  [1m[36mBug Load (0.2ms)[0m  [1m[34mSELECT  "bugs".* FROM "bugs" WHERE "bugs"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  Rendering bugs/details.html.erb within layouts/application
+  Rendered bugs/details.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 29ms (Views: 25.5ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/bugs/details/8" for 127.0.0.1 at 2018-03-19 14:23:51 +0500
+Processing by BugsController#details as HTML
+  Parameters: {"id"=>"8"}
+  [1m[36mBug Load (0.3ms)[0m  [1m[34mSELECT  "bugs".* FROM "bugs" WHERE "bugs"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  Rendering bugs/details.html.erb within layouts/application
+  Rendered bugs/details.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 35ms (Views: 28.5ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/bugs/show/5" for 127.0.0.1 at 2018-03-19 14:23:57 +0500
+Processing by BugsController#show as HTML
+  Parameters: {"id"=>"5"}
+  Rendering bugs/show.html.erb within layouts/application
+  [1m[36mBug Load (0.5ms)[0m  [1m[34mSELECT "bugs".* FROM "bugs" WHERE "bugs"."project_id" = $1[0m  [["project_id", 5]]
+  Rendered bugs/show.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 41ms (Views: 38.3ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/bugs/details/8" for 127.0.0.1 at 2018-03-19 14:24:01 +0500
+Processing by BugsController#details as HTML
+  Parameters: {"id"=>"8"}
+  [1m[36mBug Load (0.4ms)[0m  [1m[34mSELECT  "bugs".* FROM "bugs" WHERE "bugs"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  Rendering bugs/details.html.erb within layouts/application
+  Rendered bugs/details.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 41ms (Views: 34.3ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/dashboard/home" for 127.0.0.1 at 2018-03-19 14:24:04 +0500
+Processing by DashboardController#home as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering dashboard/home.html.erb within layouts/application
+  [1m[36mProject Load (0.4ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."manager_id" = $1[0m  [["manager_id", 1]]
+  Rendered dashboard/home.html.erb within layouts/application (4.3ms)
+Completed 200 OK in 42ms (Views: 37.3ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/users/logout" for 127.0.0.1 at 2018-03-19 14:24:06 +0500
+Processing by UsersController#logout as HTML
+Redirected to http://localhost:3000/users/login
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users/login" for 127.0.0.1 at 2018-03-19 14:24:06 +0500
+Processing by UsersController#login as HTML
+  Rendering users/login.html.erb within layouts/application
+  Rendered users/login.html.erb within layouts/application (4.8ms)
+Completed 200 OK in 44ms (Views: 42.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/process_login" for 127.0.0.1 at 2018-03-19 14:24:54 +0500
+Processing by UsersController#process_login as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"gitkwIYiK1Rb4uNipXkhLfvkgAj8T/BdNaoAGgYKmuSjTTbcBpNc9PZNocod4cJUpRnpB92X/rjcSZ3kVTHNwg==", "user"=>{"email"=>"shahrukh@k.com", "password"=>"[FILTERED]"}, "commit"=>"Submit"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 AND "users"."password" = $2[0m  [["email", "shahrukh@k.com"], ["password", "123456"]]
+Redirected to http://localhost:3000/dashboard/home
+Completed 302 Found in 4ms (ActiveRecord: 0.4ms)
+
+
+Started GET "/dashboard/home" for 127.0.0.1 at 2018-03-19 14:24:54 +0500
+Processing by DashboardController#home as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering dashboard/home.html.erb within layouts/application
+  [1m[36mProject Load (0.3ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."manager_id" = $1[0m  [["manager_id", 1]]
+  Rendered dashboard/home.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 28ms (Views: 25.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/dashboard/project_details/5" for 127.0.0.1 at 2018-03-19 14:24:56 +0500
+Processing by DashboardController#project_details as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mProject Load (0.3ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering dashboard/project_details.html.erb within layouts/application
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "project_users" ON "users"."id" = "project_users"."user_id" WHERE "project_users"."project_id" = $1[0m  [["project_id", 5]]
+  Rendered dashboard/project_details.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 35ms (Views: 28.9ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/bugs/show/5" for 127.0.0.1 at 2018-03-19 14:25:04 +0500
+Processing by BugsController#show as HTML
+  Parameters: {"id"=>"5"}
+  Rendering bugs/show.html.erb within layouts/application
+  [1m[36mBug Load (0.4ms)[0m  [1m[34mSELECT "bugs".* FROM "bugs" WHERE "bugs"."project_id" = $1[0m  [["project_id", 5]]
+  Rendered bugs/show.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 29ms (Views: 27.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/bugs/details/8" for 127.0.0.1 at 2018-03-19 14:25:10 +0500
+Processing by BugsController#details as HTML
+  Parameters: {"id"=>"8"}
+  [1m[36mBug Load (0.3ms)[0m  [1m[34mSELECT  "bugs".* FROM "bugs" WHERE "bugs"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  Rendering bugs/details.html.erb within layouts/application
+  Rendered bugs/details.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 36ms (Views: 29.0ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/users/logout" for 127.0.0.1 at 2018-03-19 14:27:28 +0500
+Processing by UsersController#logout as HTML
+Redirected to http://localhost:3000/users/login
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users/login" for 127.0.0.1 at 2018-03-19 14:27:28 +0500
+Processing by UsersController#login as HTML
+  Rendering users/login.html.erb within layouts/application
+  Rendered users/login.html.erb within layouts/application (3.9ms)
+Completed 200 OK in 48ms (Views: 45.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/login" for 127.0.0.1 at 2018-03-19 14:43:43 +0500
+Processing by UsersController#login as HTML
+  Rendering users/login.html.erb within layouts/application
+  Rendered users/login.html.erb within layouts/application (1.8ms)
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/home/devsinc/Desktop/ror/bugs/app/views/users/login.html.erb:14: syntax error, unexpected ','
+rs_process_login_path do |f| , :class => "form-horizontal" )
+                              ^
+/home/devsinc/Desktop/ror/bugs/app/views/users/login.html.erb:43: syntax error, unexpected keyword_ensure, expecting end-of-input
+          ensure
+                ^):
+  
+app/views/users/login.html.erb:14: syntax error, unexpected ','
+app/views/users/login.html.erb:43: syntax error, unexpected keyword_ensure, expecting end-of-input
+Started GET "/users/login" for 127.0.0.1 at 2018-03-19 14:44:42 +0500
+Processing by UsersController#login as HTML
+  Rendering users/login.html.erb within layouts/application
+  Rendered users/login.html.erb within layouts/application (3.4ms)
+Completed 200 OK in 28ms (Views: 27.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/login" for 127.0.0.1 at 2018-03-19 14:44:56 +0500
+Processing by UsersController#login as HTML
+  Rendering users/login.html.erb within layouts/application
+  Rendered users/login.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 30ms (Views: 28.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/login" for 127.0.0.1 at 2018-03-19 14:44:57 +0500
+Processing by UsersController#login as HTML
+  Rendering users/login.html.erb within layouts/application
+  Rendered users/login.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 29ms (Views: 27.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/login" for 127.0.0.1 at 2018-03-19 14:45:08 +0500
+Processing by UsersController#login as HTML
+  Rendering users/login.html.erb within layouts/application
+  Rendered users/login.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 38ms (Views: 37.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/login" for 127.0.0.1 at 2018-03-19 14:46:09 +0500
+Processing by UsersController#login as HTML
+  Rendering users/login.html.erb within layouts/application
+  Rendered users/login.html.erb within layouts/application (3.2ms)
+Completed 200 OK in 32ms (Views: 30.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/login" for 127.0.0.1 at 2018-03-19 14:48:20 +0500
+Processing by UsersController#login as HTML
+  Rendering users/login.html.erb within layouts/application
+  Rendered users/login.html.erb within layouts/application (4.1ms)
+Completed 200 OK in 48ms (Views: 45.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/login" for 127.0.0.1 at 2018-03-19 14:49:11 +0500
+Processing by UsersController#login as HTML
+  Rendering users/login.html.erb within layouts/application
+  Rendered users/login.html.erb within layouts/application (3.5ms)
+Completed 200 OK in 33ms (Views: 31.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/login" for 127.0.0.1 at 2018-03-19 14:49:12 +0500
+Processing by UsersController#login as HTML
+  Rendering users/login.html.erb within layouts/application
+  Rendered users/login.html.erb within layouts/application (4.5ms)
+Completed 200 OK in 46ms (Views: 44.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/login" for 127.0.0.1 at 2018-03-19 14:49:12 +0500
+Processing by UsersController#login as HTML
+  Rendering users/login.html.erb within layouts/application
+  Rendered users/login.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 25ms (Views: 24.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/login" for 127.0.0.1 at 2018-03-19 14:52:16 +0500
+Processing by UsersController#login as HTML
+  Rendering users/login.html.erb within layouts/application
+  Rendered users/login.html.erb within layouts/application (1.3ms)
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/home/devsinc/Desktop/ror/bugs/app/views/users/login.html.erb:14: syntax error, unexpected ','
+rs_process_login_path do |f| , :class => "form-horizontal" )
+                              ^
+/home/devsinc/Desktop/ror/bugs/app/views/users/login.html.erb:48: syntax error, unexpected keyword_ensure, expecting end-of-input
+          ensure
+                ^):
+  
+app/views/users/login.html.erb:14: syntax error, unexpected ','
+app/views/users/login.html.erb:48: syntax error, unexpected keyword_ensure, expecting end-of-input
+Started GET "/users/login" for 127.0.0.1 at 2018-03-19 14:52:36 +0500
+Processing by UsersController#login as HTML
+  Rendering users/login.html.erb within layouts/application
+  Rendered users/login.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 26ms (Views: 24.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/login" for 127.0.0.1 at 2018-03-19 14:53:43 +0500
+Processing by UsersController#login as HTML
+  Rendering users/login.html.erb within layouts/application
+  Rendered users/login.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 26ms (Views: 24.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/process_login" for 127.0.0.1 at 2018-03-19 14:55:37 +0500
+Processing by UsersController#process_login as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"vfnFI5xUfWrr4Nq2CMjIK2IAGQgiYRENK2gTizb8chLiw3yRr05Dsgdg40QX8RaKwD0AzzBA6GIbPAASuX9H4A==", "user"=>{"email"=>"shahrukh@k.com", "password"=>"[FILTERED]"}, "commit"=>"Submit"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 AND "users"."password" = $2[0m  [["email", "shahrukh@k.com"], ["password", "123456"]]
+Redirected to http://localhost:3000/dashboard/home
+Completed 302 Found in 4ms (ActiveRecord: 0.6ms)
+
+
+Started GET "/dashboard/home" for 127.0.0.1 at 2018-03-19 14:55:37 +0500
+Processing by DashboardController#home as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering dashboard/home.html.erb within layouts/application
+  [1m[36mProject Load (0.4ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."manager_id" = $1[0m  [["manager_id", 1]]
+  Rendered dashboard/home.html.erb within layouts/application (3.4ms)
+Completed 200 OK in 31ms (Views: 27.2ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/bugs/show/5" for 127.0.0.1 at 2018-03-19 14:55:40 +0500
+Processing by BugsController#show as HTML
+  Parameters: {"id"=>"5"}
+  Rendering bugs/show.html.erb within layouts/application
+  [1m[36mBug Load (0.6ms)[0m  [1m[34mSELECT "bugs".* FROM "bugs" WHERE "bugs"."project_id" = $1[0m  [["project_id", 5]]
+  Rendered bugs/show.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 46ms (Views: 43.4ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/users/logout" for 127.0.0.1 at 2018-03-19 14:55:44 +0500
+Processing by UsersController#logout as HTML
+Redirected to http://localhost:3000/users/login
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users/login" for 127.0.0.1 at 2018-03-19 14:55:44 +0500
+Processing by UsersController#login as HTML
+  Rendering users/login.html.erb within layouts/application
+  Rendered users/login.html.erb within layouts/application (4.6ms)
+Completed 200 OK in 39ms (Views: 37.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2018-03-19 14:55:47 +0500
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (4.1ms)
+Completed 200 OK in 39ms (Views: 37.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2018-03-19 14:58:17 +0500
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (0.8ms)
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/home/devsinc/Desktop/ror/bugs/app/views/users/new.html.erb:17: syntax error, unexpected '<'
+pend=( f.email_field :email %</div>
+                              ^
+/home/devsinc/Desktop/ror/bugs/app/views/users/new.html.erb:18: unknown regexp options - dv
+/home/devsinc/Desktop/ror/bugs/app/views/users/new.html.erb:19: syntax error, unexpected '<'
+ <div class="form-group"> <%= f.
+  ^
+/home/devsinc/Desktop/ror/bugs/app/views/users/new.html.erb:19: syntax error, unexpected '<'
+ <div class="form-group"> <%= f.label :password );@output
+                           ^
+/home/devsinc/Desktop/ror/bugs/app/views/users/new.html.erb:27: syntax error, unexpected keyword_end, expecting ')'
+'.freeze; end 
+             ^
+/home/devsinc/Desktop/ror/bugs/app/views/users/new.html.erb:38: syntax error, unexpected keyword_ensure, expecting ')'
+          ensure
+                ^
+/home/devsinc/Desktop/ror/bugs/app/views/users/new.html.erb:40: syntax error, unexpected keyword_end, expecting ')'
+          end
+             ^):
+  
+app/views/users/new.html.erb:17: syntax error, unexpected '<'
+app/views/users/new.html.erb:18: unknown regexp options - dv
+app/views/users/new.html.erb:19: syntax error, unexpected '<'
+app/views/users/new.html.erb:19: syntax error, unexpected '<'
+app/views/users/new.html.erb:27: syntax error, unexpected keyword_end, expecting ')'
+app/views/users/new.html.erb:38: syntax error, unexpected keyword_ensure, expecting ')'
+app/views/users/new.html.erb:40: syntax error, unexpected keyword_end, expecting ')'
+Started GET "/users/new" for 127.0.0.1 at 2018-03-19 14:58:34 +0500
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (3.4ms)
+Completed 200 OK in 31ms (Views: 30.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2018-03-19 14:58:42 +0500
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 24ms (Views: 22.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2018-03-19 15:00:35 +0500
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (4.7ms)
+Completed 200 OK in 34ms (Views: 32.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2018-03-19 15:00:37 +0500
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (4.5ms)
+Completed 200 OK in 41ms (Views: 39.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2018-03-19 15:00:56 +0500
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (3.8ms)
+Completed 200 OK in 27ms (Views: 25.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2018-03-19 15:00:57 +0500
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (3.1ms)
+Completed 200 OK in 32ms (Views: 30.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2018-03-19 15:02:04 +0500
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (4.6ms)
+Completed 200 OK in 33ms (Views: 31.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2018-03-19 15:02:05 +0500
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (4.7ms)
+Completed 200 OK in 34ms (Views: 32.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2018-03-19 15:02:05 +0500
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (5.5ms)
+Completed 200 OK in 43ms (Views: 41.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2018-03-19 15:02:05 +0500
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (3.3ms)
+Completed 200 OK in 34ms (Views: 32.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2018-03-19 15:03:37 +0500
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (11.4ms)
+Completed 200 OK in 41ms (Views: 38.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2018-03-19 15:04:12 +0500
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (4.6ms)
+Completed 200 OK in 35ms (Views: 33.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/process_login" for 127.0.0.1 at 2018-03-19 15:04:21 +0500
+Processing by UsersController#process_login as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"jWpkTV8utsx8ytg7IZjHEfrcLUlziWUqItc1+DguvELrih2/kt/AF6PFiwHgpJrzhIY+g6gqM5eDs/zHOW7KsA==", "user"=>{"email"=>"shahrukh@k.com", "password"=>"[FILTERED]"}, "commit"=>"Submit"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 AND "users"."password" = $2[0m  [["email", "shahrukh@k.com"], ["password", "123456"]]
+Redirected to http://localhost:3000/dashboard/home
+Completed 302 Found in 5ms (ActiveRecord: 0.6ms)
+
+
+Started GET "/dashboard/home" for 127.0.0.1 at 2018-03-19 15:04:21 +0500
+Processing by DashboardController#home as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering dashboard/home.html.erb within layouts/application
+  [1m[36mProject Load (0.3ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."manager_id" = $1[0m  [["manager_id", 1]]
+  Rendered dashboard/home.html.erb within layouts/application (3.1ms)
+Completed 200 OK in 28ms (Views: 25.1ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/bugs/show/5" for 127.0.0.1 at 2018-03-19 15:05:41 +0500
+Processing by BugsController#show as HTML
+  Parameters: {"id"=>"5"}
+  Rendering bugs/show.html.erb within layouts/application
+  [1m[36mBug Load (0.5ms)[0m  [1m[34mSELECT "bugs".* FROM "bugs" WHERE "bugs"."project_id" = $1[0m  [["project_id", 5]]
+  Rendered bugs/show.html.erb within layouts/application (3.1ms)
+Completed 200 OK in 35ms (Views: 32.2ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/bugs/new/5" for 127.0.0.1 at 2018-03-19 15:05:46 +0500
+Processing by BugsController#new as HTML
+  Parameters: {"id"=>"5"}
+  Rendering bugs/new.html.erb within layouts/application
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered bugs/new.html.erb within layouts/application (6.2ms)
+Completed 200 OK in 34ms (Views: 31.4ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/bugs/new/5" for 127.0.0.1 at 2018-03-19 15:06:22 +0500
+Processing by BugsController#new as HTML
+  Parameters: {"id"=>"5"}
+  Rendering bugs/new.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered bugs/new.html.erb within layouts/application (5.7ms)
+Completed 200 OK in 37ms (Views: 34.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/dashboard/home" for 127.0.0.1 at 2018-03-19 15:06:48 +0500
+Processing by DashboardController#home as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering dashboard/home.html.erb within layouts/application
+  [1m[36mProject Load (0.4ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."manager_id" = $1[0m  [["manager_id", 1]]
+  Rendered dashboard/home.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 43ms (Views: 38.9ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/projects/new" for 127.0.0.1 at 2018-03-19 15:06:49 +0500
+Processing by ProjectsController#new as HTML
+  Rendering projects/new.html.erb within layouts/application
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."role" = $1[0m  [["role", "Developer"]]
+  Rendered projects/new.html.erb within layouts/application (5.3ms)
+Completed 200 OK in 50ms (Views: 46.9ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/projects/new" for 127.0.0.1 at 2018-03-19 15:09:26 +0500
+Processing by ProjectsController#new as HTML
+  Rendering projects/new.html.erb within layouts/application
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."role" = $1[0m  [["role", "Developer"]]
+  Rendered projects/new.html.erb within layouts/application (5.7ms)
+Completed 200 OK in 38ms (Views: 35.5ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/projects/new" for 127.0.0.1 at 2018-03-19 15:11:59 +0500
+Processing by ProjectsController#new as HTML
+  Rendering projects/new.html.erb within layouts/application
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."role" = $1[0m  [["role", "Developer"]]
+  Rendered projects/new.html.erb within layouts/application (4.1ms)
+Completed 200 OK in 35ms (Views: 32.5ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/projects/new" for 127.0.0.1 at 2018-03-19 15:12:00 +0500
+Processing by ProjectsController#new as HTML
+  Rendering projects/new.html.erb within layouts/application
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."role" = $1[0m  [["role", "Developer"]]
+  Rendered projects/new.html.erb within layouts/application (5.8ms)
+Completed 200 OK in 39ms (Views: 37.0ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/projects/new" for 127.0.0.1 at 2018-03-19 15:12:00 +0500
+Processing by ProjectsController#new as HTML
+  Rendering projects/new.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."role" = $1[0m  [["role", "Developer"]]
+  Rendered projects/new.html.erb within layouts/application (3.3ms)
+Completed 200 OK in 26ms (Views: 24.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/projects/new" for 127.0.0.1 at 2018-03-19 15:12:01 +0500
+Processing by ProjectsController#new as HTML
+  Rendering projects/new.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."role" = $1[0m  [["role", "Developer"]]
+  Rendered projects/new.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 22ms (Views: 20.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/projects/new" for 127.0.0.1 at 2018-03-19 15:12:01 +0500
+Processing by ProjectsController#new as HTML
+  Rendering projects/new.html.erb within layouts/application
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."role" = $1[0m  [["role", "Developer"]]
+  Rendered projects/new.html.erb within layouts/application (3.3ms)
+Completed 200 OK in 26ms (Views: 25.1ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/projects/new" for 127.0.0.1 at 2018-03-19 15:12:01 +0500
+Processing by ProjectsController#new as HTML
+  Rendering projects/new.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."role" = $1[0m  [["role", "Developer"]]
+  Rendered projects/new.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 29ms (Views: 28.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/projects/new" for 127.0.0.1 at 2018-03-19 15:14:14 +0500
+Processing by ProjectsController#new as HTML
+  Rendering projects/new.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."role" = $1[0m  [["role", "Developer"]]
+  Rendered projects/new.html.erb within layouts/application (3.5ms)
+Completed 200 OK in 30ms (Views: 28.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/dashboard/home" for 127.0.0.1 at 2018-03-19 15:14:15 +0500
+Processing by DashboardController#home as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering dashboard/home.html.erb within layouts/application
+  [1m[36mProject Load (0.3ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."manager_id" = $1[0m  [["manager_id", 1]]
+  Rendered dashboard/home.html.erb within layouts/application (3.4ms)
+Completed 200 OK in 31ms (Views: 27.2ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/dashboard/home" for 127.0.0.1 at 2018-03-19 15:14:16 +0500
+Processing by DashboardController#home as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering dashboard/home.html.erb within layouts/application
+  [1m[36mProject Load (0.3ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."manager_id" = $1[0m  [["manager_id", 1]]
+  Rendered dashboard/home.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 44ms (Views: 41.0ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/users/logout" for 127.0.0.1 at 2018-03-19 15:14:18 +0500
+Processing by UsersController#logout as HTML
+Redirected to http://localhost:3000/users/login
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users/login" for 127.0.0.1 at 2018-03-19 15:14:18 +0500
+Processing by UsersController#login as HTML
+  Rendering users/login.html.erb within layouts/application
+  Rendered users/login.html.erb within layouts/application (3.1ms)
+Completed 200 OK in 35ms (Views: 32.7ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/process_login" for 127.0.0.1 at 2018-03-19 15:14:41 +0500
+Processing by UsersController#process_login as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"r7GvpGYgXExUNHNJtS+KegnpDxR+ipRky70X2of3K7uZfvHY6Pkfv7yP01zlD5XG77JEHNTJvNGwEdIWJ0B19A==", "user"=>{"email"=>"shahrukh@k.com", "password"=>"[FILTERED]"}, "commit"=>"Submit"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 AND "users"."password" = $2[0m  [["email", "shahrukh@k.com"], ["password", "123456"]]
+Redirected to http://localhost:3000/dashboard/home
+Completed 302 Found in 4ms (ActiveRecord: 0.5ms)
+
+
+Started GET "/dashboard/home" for 127.0.0.1 at 2018-03-19 15:14:41 +0500
+Processing by DashboardController#home as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering dashboard/home.html.erb within layouts/application
+  [1m[36mProject Load (0.3ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."manager_id" = $1[0m  [["manager_id", 1]]
+  Rendered dashboard/home.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 37ms (Views: 34.4ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/users/logout" for 127.0.0.1 at 2018-03-19 15:14:47 +0500
+Processing by UsersController#logout as HTML
+Redirected to http://localhost:3000/users/login
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users/login" for 127.0.0.1 at 2018-03-19 15:14:47 +0500
+Processing by UsersController#login as HTML
+  Rendering users/login.html.erb within layouts/application
+  Rendered users/login.html.erb within layouts/application (4.9ms)
+Completed 200 OK in 38ms (Views: 36.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/bugs/show/5" for 127.0.0.1 at 2018-03-19 15:14:52 +0500
+Processing by BugsController#show as HTML
+  Parameters: {"id"=>"5"}
+Redirected to http://localhost:3000/users/login
+Filter chain halted as :require_login rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users/login" for 127.0.0.1 at 2018-03-19 15:14:52 +0500
+Processing by UsersController#login as HTML
+  Rendering users/login.html.erb within layouts/application
+  Rendered users/login.html.erb within layouts/application (4.9ms)
+Completed 200 OK in 34ms (Views: 32.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/dashboard/project_details/5" for 127.0.0.1 at 2018-03-19 15:14:56 +0500
+Processing by DashboardController#project_details as HTML
+  Parameters: {"id"=>"5"}
+Redirected to http://localhost:3000/users/login
+Filter chain halted as :require_login rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users/login" for 127.0.0.1 at 2018-03-19 15:14:56 +0500
+Processing by UsersController#login as HTML
+  Rendering users/login.html.erb within layouts/application
+  Rendered users/login.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 38ms (Views: 36.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/dashboard/home" for 127.0.0.1 at 2018-03-19 15:23:03 +0500
+Processing by DashboardController#home as HTML
+Redirected to http://localhost:3000/users/login
+Filter chain halted as :require_login rendered or redirected
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users/login" for 127.0.0.1 at 2018-03-19 15:23:03 +0500
+Processing by UsersController#login as HTML
+  Rendering users/login.html.erb within layouts/application
+  Rendered users/login.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 33ms (Views: 31.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/process_login" for 127.0.0.1 at 2018-03-19 15:23:59 +0500
+Processing by UsersController#process_login as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"YWLBsLdNqxq/wlsJzNH1l/9rmRik/QmI4bXptZj2vFa9oKqZMPBrWL2kBGrddc6Cf4QGN6EnNhSmhMgL67Vwpw==", "user"=>{"email"=>"shahrukh@k.com", "password"=>"[FILTERED]"}, "commit"=>"Submit"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 AND "users"."password" = $2[0m  [["email", "shahrukh@k.com"], ["password", "123456"]]
+Redirected to http://localhost:3000/dashboard/home
+Completed 302 Found in 4ms (ActiveRecord: 0.4ms)
+
+
+Started GET "/dashboard/home" for 127.0.0.1 at 2018-03-19 15:23:59 +0500
+Processing by DashboardController#home as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering dashboard/home.html.erb within layouts/application
+  [1m[36mProject Load (0.3ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."manager_id" = $1[0m  [["manager_id", 1]]
+  Rendered dashboard/home.html.erb within layouts/application (4.1ms)
+Completed 200 OK in 38ms (Views: 34.7ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/dashboard/project_details/5" for 127.0.0.1 at 2018-03-19 15:24:01 +0500
+Processing by DashboardController#project_details as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mProject Load (0.3ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering dashboard/project_details.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "project_users" ON "users"."id" = "project_users"."user_id" WHERE "project_users"."project_id" = $1[0m  [["project_id", 5]]
+  Rendered dashboard/project_details.html.erb within layouts/application (3.8ms)
+Completed 200 OK in 35ms (Views: 29.1ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/bugs/show/5" for 127.0.0.1 at 2018-03-19 15:24:07 +0500
+Processing by BugsController#show as HTML
+  Parameters: {"id"=>"5"}
+  Rendering bugs/show.html.erb within layouts/application
+  [1m[36mBug Load (0.9ms)[0m  [1m[34mSELECT "bugs".* FROM "bugs" WHERE "bugs"."project_id" = $1[0m  [["project_id", 5]]
+  Rendered bugs/show.html.erb within layouts/application (3.4ms)
+Completed 200 OK in 37ms (Views: 32.7ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/bugs/details/8" for 127.0.0.1 at 2018-03-19 15:24:09 +0500
+Processing by BugsController#details as HTML
+  Parameters: {"id"=>"8"}
+  [1m[36mBug Load (0.5ms)[0m  [1m[34mSELECT  "bugs".* FROM "bugs" WHERE "bugs"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  Rendering bugs/details.html.erb within layouts/application
+  Rendered bugs/details.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 33ms (Views: 26.8ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/dashboard/home" for 127.0.0.1 at 2018-03-19 15:30:42 +0500
+Processing by DashboardController#home as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering dashboard/home.html.erb within layouts/application
+  [1m[36mProject Load (0.3ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."manager_id" = $1[0m  [["manager_id", 1]]
+  Rendered dashboard/home.html.erb within layouts/application (3.1ms)
+Completed 200 OK in 38ms (Views: 32.1ms | ActiveRecord: 0.7ms)
+
+
